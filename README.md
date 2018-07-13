@@ -8,7 +8,7 @@ No es por capricho que multiples campos intentan a toda costa poner atajo a lo q
 
 Si bien desde hace un tiempo, casi como estilo de vida selectiva, algunos grupos han optado por modificado sus habitos alimenticios al punto de jerarquisarlo como religión.
 
-**Veganos y vegetarianos**. Un nicho en crecimiento con el cual trabajaremos con el fin, de enclarecer su filosofia, motivaciones, y porqué es una de las vías a solucionar un problema mundial.
+**Veganos y vegetarianos** será el nicho en crecimiento con el cual trabajaremos. La finalidad. Enclarecer su filosofia, motivaciones, y porqué es una de las vías a solucionar un problema mundial.
 
 
 ## Planificación del proyecto
