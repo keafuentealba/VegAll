@@ -6,9 +6,9 @@ Si nos vamos a la data exacta, desde el año 1980 la taza de obesidad se ha mas 
 
 No es por capricho que multiples campos intentan a toda costa poner atajo a lo que se conoce como " La pandemia del siglo 21"
 
-Si bien desde hace un tiempo, casi como estilo de vida selectiva, algunos sectores han optado por modificado sus habitos alimenticios al punto de jerarquisarlo como religión.
+Si bien desde hace un tiempo, casi como estilo de vida selectiva, algunos grupos han optado por modificado sus habitos alimenticios al punto de jerarquisarlo como religión.
 
-**Veganos y vegetarianos**, en conjunto forman un nicho en crecimiento el cual trabajaremos con el fin, de enclarecer su filosofia, motivaciones, y porqué es una de las vías a solucionar un problema mundial.
+**Veganos y vegetarianos** Un nicho en crecimiento con el cual trabajaremos con el fin, de enclarecer su filosofia, motivaciones, y porqué es una de las vías a solucionar un problema mundial.
 
 
 ## Planificación del proyecto
@@ -23,9 +23,9 @@ Nuestra primera etapa, toma un rango de 100 personas con el fin de testear cual 
 
 Junto con esto, entrevistas especificas nos dan un sondeo de necesidades, utilidad y proposito, junto con problematicas de diariovivir a los cuales va enfocado nuestro proyecto.
 
-Con un solucionario en manos, nuestro proyecto de red social busca educar e informar, no solamente a la comuninidad señalada, sino a toda una población, sobre hábitos alimenticios saludables. 
+Con un solucionario en manos, nuestro proyecto de red social busca educar e informar, no solamente a la comunidad señalada, sino a toda una población, sobre hábitos alimenticios saludables. 
 
-## Encuesta de primer filtro
+## Encuesta de filtro: Primera Etapa
 
 [Ir a Encuesta](https://docs.google.com/forms/d/1pAT8gG_so1w9wMd5OG0TSr3LzkTG2cfk7_r-MU1N6RU/edit#response=ACYDBNiJOnch-Ue179B3fTitdh0nuWPX0CfCjcpGsNgKmtx02tMx7gNyPvvQWA)
 
