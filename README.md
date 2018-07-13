@@ -32,7 +32,9 @@ Con un solucionario en manos, nuestro proyecto de red social busca educar e info
 ## Resultados del filtro, y sujeto a evaluar.
 
 [Ir a registro](https://docs.google.com/spreadsheets/d/17VbABuryjbnrppwFQFc1cE01EfdKPc3P4dPcOUt0Yvc/edit#gid=1532792178)
-
+ 
+## Registro de Encuesta específica y Benchmarking.
+[Ir a registro](https://docs.google.com/document/d/1bXh9mqwgbbZfUSMwqK6qk0pUIxIT7TsHAE8-YM0OGm8/edit#)
 
 
 ## Data relevante
