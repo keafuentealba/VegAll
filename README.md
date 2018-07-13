@@ -39,13 +39,11 @@ Con un solucionario en manos, nuestro proyecto de red social busca educar e info
 
 #### Sketch de la solución (prototipo de baja fidelidad)
 
-![sketch final Red-Social]
-
-(ingrese link aca)
+![sketch final Red-Social](https://user-images.githubusercontent.com/39282597/42709684-491a559a-86af-11e8-8bd3-084c50c69a6a.jpg)
 
 #### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
-(ingrese link aca)
+![sketch final Red-Social](ingrese link aca)
 
 
 
