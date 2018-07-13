@@ -4,7 +4,7 @@
 
 Si nos vamos a la data exacta, desde el año 1980 la taza de obesidad se ha mas que doblado en todo el mundo.
 
-No es por capricho que multiples campos intentan a toda costa poner atajo a lo que se conoce como " La pandemia del siglo 21"
+No es por capricho que multiples campos intentan a toda costa poner atajo a lo que se conoce como " La pandemia del siglo".
 
 Si bien desde hace un tiempo, casi como estilo de vida selectiva, algunos grupos han optado por modificado sus habitos alimenticios al punto de jerarquisarlo como religión.
 
@@ -49,19 +49,24 @@ Con un solucionario en manos, nuestro proyecto de red social busca educar e info
 
 ## Data relevante
 
+En primer lugar, cada integrante del equipo trabajó individualmente y planteó un sketch del proyecto. Posteriormente se hizo un peer review para exponer cada visión de la interfaz del sitio, y se creó un nuevo sketch (prototipo de baja fidelidad) a partir de las soluciones más óptimas y factibles considerando las especificaciones del usuario en cuanto al diseño y su experiencia con este producto.
+
 #### Sketch de la solución (prototipo de baja fidelidad)
 
 ![sketch final Red-Social](https://user-images.githubusercontent.com/39282597/42709684-491a559a-86af-11e8-8bd3-084c50c69a6a.jpg)
 
+El sketch anterior se pasó a un prototipo de alta fidelidad para definir el estilo completo antes de empezar a trabajar directamente con el html y css del proyecto.
+
 #### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
+
 
 ![sketch final Red-Social](ingrese link aca)
 
-###Funcionalidad y prioridades de producto.
+### Funcionalidad y prioridades de producto.
 
 .......
 
-###
+### 
 
 
 
