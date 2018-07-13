@@ -28,7 +28,11 @@ Con un solucionario en manos, nuestro proyecto de red social busca educar e info
 
 ### Objetivos.
 
-Entregar una herramienta que permita informar y facilitar el diario-vivir de la población.
+* **Entregar una herramienta que permita informar y facilitar el diario-vivir de la población**
+
+* **Facilitar la comunicación entre individuos con un fin en común**
+
+* **Fomentar el comercio relacionado a dicha área**
 
 
 ## Encuesta de filtro: Primera Etapa
