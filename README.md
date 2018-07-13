@@ -19,70 +19,36 @@ Para la planificación de este proyecto, se utilizó la herramienta **trello**.
 
 ### Definición del producto
 
-Nuestra primera etapa, toma un rango de 100 personas con el fin de testear cual era nuestro margen de consumo. El resultado de ello da que solo un 13%, cabe en nuestro grupo a tratar y es con ellos con los cuales hacemos nuestras proyecciones.
+Nuestra primera etapa, toma un rango de 100 personas con el fin de testear cual era nuestro margen de consumo. El resultado de ello da que solo un 13%, cabe en nuestro grupo a tratar y es con ellos con los que efectuamos nuestras proyecciones.
 
-Junto con esto, entrevistas especificas nos dan un sondeo de necesidades y utilidad y proposito, junto con problematicas de diariovivir a las cuales va enfocado nuestro proyecto.
+Junto con esto, entrevistas especificas nos dan un sondeo de necesidades, utilidad y proposito, junto con problematicas de diariovivir a los cuales va enfocado nuestro proyecto.
 
 Con un solucionario en manos, nuestro proyecto de red social busca educar e informar, no solamente a la comuninidad señalada, sino a toda una población, sobre hábitos alimenticios saludables. 
 
-##Data relevante
+## Encuesta de primer filtro
 
-Al enfocarnos en la materialización de una red social, tuvimos que explorar en nuestros competidores directos. 
+[Ir a Encuesta](https://docs.google.com/forms/d/1pAT8gG_so1w9wMd5OG0TSr3LzkTG2cfk7_r-MU1N6RU/edit#response=ACYDBNiJOnch-Ue179B3fTitdh0nuWPX0CfCjcpGsNgKmtx02tMx7gNyPvvQWA)
 
- 
-Atributos a evaluar
-Instagram
-Facebook
-Twitter
-Veg-all
-Muro despliegue de ideas
-Si
-Si
-Si
-Si
-Buscador por mapa sobre tema de interés.
-No
-Si
-No
-Si
-Buscador de locales de comida
-Si
-Si
-Si
-Si
-Interacción con otras redes
-Si
-Si
-Si
-Si
-Especialización frente a un tema
+## Resultados del filtro, y sujeto a evaluar.
+
+[Ir a registro](https://docs.google.com/spreadsheets/d/17VbABuryjbnrppwFQFc1cE01EfdKPc3P4dPcOUt0Yvc/edit#gid=1532792178)
 
 
 
+## Data relevante
+
+#### Sketch de la solución (prototipo de baja fidelidad)
+
+![sketch final Red-Social]
+
+(ingrese link aca)
+
+#### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
+
+(ingrese link aca)
 
 
 
-
-
-Reacciones ante publicación
-Si
-Si
-Si
-Si
-Recomendación específica en cuanto a uso.
-
-
-
-
-
-
-
-
-Alternativa referente a uso y consumo.
-No
-Si
-No
-Si
 
 
 
