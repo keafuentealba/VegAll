@@ -8,7 +8,7 @@ No es por capricho que multiples campos intentan a toda costa poner atajo a lo q
 
 Si bien desde hace un tiempo, casi como estilo de vida selectiva, algunos grupos han optado por modificado sus habitos alimenticios al punto de jerarquisarlo como religión.
 
-**Veganos y vegetarianos** Un nicho en crecimiento con el cual trabajaremos con el fin, de enclarecer su filosofia, motivaciones, y porqué es una de las vías a solucionar un problema mundial.
+**Veganos y vegetarianos** .Un nicho en crecimiento con el cual trabajaremos con el fin, de enclarecer su filosofia, motivaciones, y porqué es una de las vías a solucionar un problema mundial.
 
 
 ## Planificación del proyecto
@@ -24,6 +24,12 @@ Nuestra primera etapa, toma un rango de 100 personas con el fin de testear cual 
 Junto con esto, entrevistas especificas nos dan un sondeo de necesidades, utilidad y proposito, junto con problematicas de diariovivir a los cuales va enfocado nuestro proyecto.
 
 Con un solucionario en manos, nuestro proyecto de red social busca educar e informar, no solamente a la comunidad señalada, sino a toda una población, sobre hábitos alimenticios saludables. 
+
+
+### Objetivos.
+
+Entregar una herramienta que permita informar y facilitar el diario-vivir de la población.
+
 
 ## Encuesta de filtro: Primera Etapa
 
@@ -46,6 +52,12 @@ Con un solucionario en manos, nuestro proyecto de red social busca educar e info
 #### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
 ![sketch final Red-Social](ingrese link aca)
+
+###Funcionalidad y prioridades de producto.
+
+.......
+
+###
 
 
 
