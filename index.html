@@ -11,17 +11,20 @@
 
  <body>
 
-   <div id="login" class="main-div">
-     <div class="container-fluid hide">
-       <div class="row">
+  <div id="login" class="main-div">
+    <div class="container-fluid hide">
+      <div class="row">
 
-         <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
-         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-         <button class="btn" onclick="login()">login</button>
+        <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <button class="btn" onclick="login()">login</button>
 
-       </div>
-     </div>
-   </div>
+         <button class="btn" onclick="googleLogin()">Google</button>
+         <button class="btn" onclick="facebookLogin()">Facebook</button>
+
+      </div>
+    </div>
+  </div>
 
    <div id="user" class="loggedin-div">
 
@@ -94,12 +97,7 @@
     </div>
   </div>
 
-
-
-
-
-
-
+  <h1 id="holi">"holi"</h1>
 
 <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 <script>
@@ -113,6 +111,10 @@ var config = {
   messagingSenderId: "877652690632"
 };
 firebase.initializeApp(config);
+  let holi = document.getElementById("holi");
+  let dbref = firebase.database().ref().child("text");
+  dbref.on("value", sanp => holi.innerText = snap.val());
+
 </script>
    <script src="https://use.fontawesome.com/7873633050.js"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
