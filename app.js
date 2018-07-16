@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
     if(user != null){
       let idEmail = user.email;
-      document.getElementById("");
+      document.getElementById("usertext").innerHTML = "welcome user : " + idEmail;
     }
 
   } else {
@@ -16,15 +16,24 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
-indow.login = () => {
+window.login = () => {
   let login = document.getElementById("staticEmail").value;
   let password = document.getElementById("inputPassword").value;
 
   firebase.auth().signInWithEmailAndPassword(userEmail, userPassword).catch((error) => {
 
-  // Handle Errors here.
-  let errorCode = error.code;
-  let errorMessage = error.message;
+    // Handle Errors here.
+    let errorCode = error.code;
+    let errorMessage = error.message;
+
+  window.alert("error : " + errorMessage);
   // ...
 });
+    // Handle Errors here.
+    let errorCode = error.code;
+    let errorMessage = error.message;
+
+};
+const logOut = () => {
+  firebase.auth().signOut();
 };
