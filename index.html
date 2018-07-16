@@ -11,10 +11,16 @@
  </head>
 
  <body>
-   <div class="main-div">
+   <div id="ligin" class="main-div">
      <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
       <button class="btn" onclick="login()">login</button>
+   </div>
+   <div id="user" class="loggedin-div">
+     <h3>usuario</h3>
+     <p id="textoss">welcome to firebase login</p>
+     <button type="button" name="button">logOut</button>
+
    </div>
    <!-- <div id="login" class="container-fluid">
       <div class="row"><i class="fas fa-cogs"></i></div>
@@ -69,6 +75,19 @@
 
 
 
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCTisCFz23k7yBARrZy6dbF7MvpGK0eALY",
+  authDomain: "vegall-42fcd.firebaseapp.com",
+  databaseURL: "https://vegall-42fcd.firebaseio.com",
+  projectId: "vegall-42fcd",
+  storageBucket: "vegall-42fcd.appspot.com",
+  messagingSenderId: "877652690632"
+};
+firebase.initializeApp(config);
+</script>
    <script src="https://use.fontawesome.com/7873633050.js"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

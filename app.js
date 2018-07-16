@@ -3,11 +3,13 @@ firebase.auth().onAuthStateChanged((user) => {
     document.getElementById("user").style.display = "block";
     document.getElementById("login").style.display = "none";
 
-  let user = firebase.auth().currentUser;
-  if(user != null){
-    let idEmail = user.email;
-    document.getElementById("")
-  }
+    let user = firebase.auth().currentUser;
+
+    if(user != null){
+      let idEmail = user.email;
+      document.getElementById("");
+    }
+
   } else {
     document.getElementById("user").style.display = "none";
     document.getElementById("login").style.display = "block";
