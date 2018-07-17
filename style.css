@@ -51,3 +51,7 @@ input, button{
   border:1px solid #5d8ffc;
   cursor: pointer;
 }
+
+.hide{
+  display: none;
+}
