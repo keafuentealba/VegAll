@@ -64,9 +64,9 @@ El sketch anterior se pasó a un prototipo de alta fidelidad para definir el est
 
 ### Funcionalidad y prioridades de producto.
 
-.......
+## Descripción de producto.
 
-### 
+
 
 
 
