@@ -1,6 +1,5 @@
- <!DOCTYPE html>
- <html lang="en">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
      <meta charset="UTF-8">
      <title>VegAll</title>
@@ -11,21 +10,62 @@
  </head>
 
  <body>
-
-  <div id="login" class="main-div">
-    <div class="container-fluid hide">
-      <div class="row">
-
-        <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        <button class="btn" onclick="login()">login</button>
-
-         <button class="btn" onclick="googleLogin()">Google</button>
-         <button class="btn" onclick="facebookLogin()">Facebook</button>
-
-      </div>
+     <section>
+<!--NavBar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+    <a class="navbar-brand" href="#">VegAll</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                 <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                 <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
     </div>
-  </div>
+</nav><br>
+    </section>
+ 
+<!--login-->
+<section>
+
+        <div class="container" id="logo-titulo">
+                  <center>
+            <img src="img/comida.jpeg" alt="" style="max-width: 150px;">
+                   <br> <h1><b>VegAll</b></h1>
+                </center>   <br>
+        </div>   
+ <div class="container">
+   <div id="login" class="main-div">
+     <div class="container-fluid hide">
+       <div class="row">
+            
+         <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
+         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+         <button class="btnL" onclick="login()">login</button>
+        </div><br>
+        <div class="container">
+        <p>  o conéctate usando  </p>
+        <div>
+         <button class="btnG" onclick="googleLogin()">Google</button>
+         <button class="btnF" onclick="facebookLogin()">Facebook</button>
+        </div>
+        </div>
+       
+     </div>
+   </div>
 
    <div id="user" class="loggedin-div">
 
@@ -37,17 +77,46 @@
 
 
    <div id="loginIn">
-     <div class="container-fuid hide">
+     <div class="container-fluid hide">
        <div class="row">
           <!--  insertar codigo aquí-->
        </div>
      </div>
    </div>
+</div>
+</section>
 
-
+<!--Perfil-->
    <div id="profile">
      <div class="container-fluid hide">
        <div class="row">
+            <section>
+                    <!--NavBar-->
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                            <button type="button" class="btn btn-link"> <i class="fas fa-home"></i></button>
+                        <a class="navbar-brand" href="#">VegAll</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav><br>
+                        </section>
          <!--  insertar codigo aquí-->
        </div>
      </div>
@@ -57,6 +126,33 @@
     <div id="post">
       <div =class="container-fluid hide">
         <div class="row">
+                <section>
+                        <!--NavBar-->
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                                <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                            <a class="navbar-brand" href="#">VegAll</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav><br>
+                            </section>
            <!--  insertar codigo aquí-->
         </div>
       </div>
@@ -66,6 +162,33 @@
   <div id="placesOfInterest">
    <div class="container-fluid hide">
      <div class="row">
+            <section>
+                    <!--NavBar-->
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                            <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                        <a class="navbar-brand" href="#">VegAll</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav><br>
+                        </section>
         <!--  insertar codigo aquí-->
      </div>
    </div>
@@ -75,6 +198,33 @@
  <div id="recipe">
    <div class="container-fluid hide">
      <div class="row">
+            <section>
+                    <!--NavBar-->
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                            <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                        <a class="navbar-brand" href="#">VegAll</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item active">
+                                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav><br>
+                        </section>
         <!--  insertar codigo aquí-->
      </div>
     </div>
@@ -98,7 +248,12 @@
     </div>
   </div>
 
-  <h1 id="holi">"holi"</h1>
+
+
+
+
+
+
 
 <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 <script>
@@ -112,10 +267,6 @@ var config = {
   messagingSenderId: "877652690632"
 };
 firebase.initializeApp(config);
-  let holi = document.getElementById("holi");
-  let dbref = firebase.database().ref().child("text");
-  dbref.on("value", sanp => holi.innerText = snap.val());
-
 </script>
    <script src="https://use.fontawesome.com/7873633050.js"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
