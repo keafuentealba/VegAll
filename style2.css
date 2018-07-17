@@ -1,0 +1,49 @@
+.header {
+    color: black;
+    background-image: url(imagen/salad1.jpg);
+    padding: 10px;
+    text-align: right;
+};
+
+
+
+.fondoverde {
+
+    background-color: #e4dfdd;
+    background-size: cover;
+    background-position-y: center;
+    padding: 30px;
+
+    
+};
+
+.separacion {
+
+    background: #e4dfdd;
+    padding: 10px;
+};
+
+.article {
+    margin: 40px auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer {
+    color: white;
+    background-image: url(imagen/salad1.jpg);
+    padding: 30px;
+};
+
+img {
+    width: 400px;
+}
+@media all and (max-width: 1024px){
+    body {
+        background-color:whitesmoke;
+    }
+   
+    img {
+        width: 100%;
+    }
+}
