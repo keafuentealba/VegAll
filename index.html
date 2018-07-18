@@ -1,460 +1,414 @@
-<!DOCTYPE html>
- <html lang="en">
-
-<head>
-     <meta charset="UTF-8">
-     <title>VegAll</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-     <link rel="stylesheet" href="style.css" />
- </head>
-
+<html lang="en">
+  <!DOCTYPE html>
+ 
+ <head>
+      <meta charset="UTF-8">
+      <title>VegAll</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css" />
+  </head>
+ 
  <body>
-
-  <div id="login" class="main-div">
-    <div class="container-fluid hide">
-      <div class="row">
-
-        <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        <button class="btn" onclick="login()">login</button>
-
-         <button class="btn" onclick="googleLogin()">Google</button>
-         <button class="btn" onclick="facebookLogin()">Facebook</button>
-
-      </div>
+ 
+   <div class="container-fluid">
+     <div id="login" class="main-div form-login text-center">
+       <img class="mb-4" src="http://via.placeholder.com/200x100" alt="">
+ 
+         <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
+         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+         <button class="btnL" onclick="login()">login</button>
+         <br>
+ 
+         <div class="container">
+          <p>  o conéctate usando  </p>
+ 
+          <div>
+            <button class="btnG" onclick="googleLogin()">Google</button>
+            <button class="btnF" onclick="facebookLogin()">Facebook</button>
+          </div>
+ 
+ 
+ 
+           <div id="user" class="loggedin-div">
+             <h3 >usuario</h3>
+             <p id="usertext">welcome to firebase login</p>
+             <button class="logOut()" type="button" name="button">logOut</button>
+           </div>
+ 
+         </div>
+       </div>
+ 
+     <div id="profile">
+       <div class="container-fluid hide">
+         <div class="row">
+ 
+           <section>
+             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+               <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                 <a class="navbar-brand" href="#">VegAll</a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+ 
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mr-auto">
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div>
+ 
+             </nav><br>
+           </section>
+ 
+         </div>
+       </div>
+     </div>
+ 
+ 
+     <div id="post">
+       <div class="container-fluid hide">
+         <div class="row">
+ 
+           <section>
+             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+               <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                 <a class="navbar-brand" href="#">VegAll</a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav mr-auto">
+                     <li class="nav-item active">
+                       <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item active">
+                       <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                     </li>                    <li class="nav-item active">
+                       <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item active">
+                       <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                     </li>
+                   </ul>
+                 </div>
+ 
+               </nav><br>
+             </section>
+ 
+         </div>
+       </div>
+     </div>
+ 
+ 
+     <div id="placesOfInterest">
+       <div class="container-fluid hide">
+         <div class="row">
+ 
+           <section>
+             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+               <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                 <a class="navbar-brand" href="#">VegAll</a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+ 
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mr-auto">
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div>
+ 
+             </nav><br>
+           </section>
+ 
+           <div class="col-lg-9">
+             <div class="card mt-4">
+               <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+               <div class="card-body">
+                 <h3 class="card-title">Product Name</h3>
+                 <h4>$24.99</h4>
+                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                 <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                 4.0 stars
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
     </div>
-  </div>
-
-   <div id="user" class="loggedin-div">
-
-     <h3 >usuario</h3>
-      <p id="usertext">welcome to firebase login</p>
-     <button class="logOut()" type="button" name="button">logOut</button>
-
-   </div>
-
-
-   <div id="loginIn">
-     <div class="container-fuid hide">
-       <div class="row">
-          <!--  insertar codigo aquí-->
-       </div>
-     </div>
-   </div>
-
-
-   <div id="profile">
-     <div class="container-fluid hide">
-       <div class="row">
-         <!--  insertar codigo aquí-->
-       </div>
-     </div>
-   </div>
-
-
-    <div id="post">
-      <div =class="container-fluid hide">
+ 
+ 
+    <div id="recipe">
+      <div class="container-fluid hide">
         <div class="row">
-           <!--  insertar codigo aquí-->
-        </div>
-      </div>
-    </div>
-
-
-  <div id="placesOfInterest">
-   <div class="container-fluid hide">
-     <div class="row">
-
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-       <div class="container">
-         <a class="navbar-brand" href="#">Start Bootstrap</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarResponsive">
-           <ul class="navbar-nav ml-auto">
-             <li class="nav-item active">
-               <a class="nav-link" href="#">Home
-                 <span class="sr-only">(current)</span>
-               </a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">About</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">Services</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">Contact</a>
-             </li>
-           </ul>
+ 
+           <section>
+             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+               <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                 <a class="navbar-brand" href="#">VegAll</a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+ 
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mr-auto">
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div>
+ 
+             </nav><br>
+           </section>
+ 
          </div>
        </div>
-     </nav>
-
-     <!-- Page Content -->
-     <!-- <div class="container">
-       <div class="row">
-         <div class="col-lg-3">
-           <h1 class="my-4">Shop Name</h1>
-           <div class="list-group">
-             <a href="#" class="list-group-item active">Category 1</a>
-             <a href="#" class="list-group-item">Category 2</a>
-             <a href="#" class="list-group-item">Category 3</a>
-           </div>
-         </div> -->
-         <!-- /.col-lg-3 -->
-
-         <div class="col-lg-9">
-
-           <div class="card mt-4">
-             <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
-             <div class="card-body">
-               <h3 class="card-title">Product Name</h3>
-               <h4>$24.99</h4>
-               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-               <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9733; &#9734;</span>
-               4.0 stars
-             </div>
-           </div>
-           <!-- /.card -->
-
-           <!-- <div class="card card-outline-secondary my-4">
-             <div class="card-header">
-               Product Reviews
-             </div>
-             <div class="card-body">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-               <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-               <hr>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-               <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-               <hr>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-               <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-               <hr>
-               <a href="#" class="btn btn-success">Leave a Review</a>
-             </div>
-           </div> -->
-           <!-- /.card -->
-
-         </div>
-         <!-- /.col-lg-9 -->
-
-       </div>
-
      </div>
-       <!--  insertar codigo aquí-->
+ 
+ 
+    <div id="recipeVegan">
+      <div class="container-fluid hide">
+        <div class="row">
+ 
+           <section>
+             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+               <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                 <a class="navbar-brand" href="#">VegAll</a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+ 
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mr-auto">
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div>
+ 
+             </nav><br>
+           </section>
+           <div id="recipeVegan"><center>
+            <div class="container-fluid hide">
+              <div class="row">
+                     <section>
+                             <div class="row">
+                                 <div class="col-12 datosUsuario"></div>
+                             </div>
+                         </section>
+                         <div class="row separacion">
+                         </div>
+                         <section>
+                             <div class="row fondoverde">
+                                 <div class="col-1 style pull-right">
+                                 </div>
+                             </div>
+             
+                                 <div class="row">
+                                 </div>
+                                 <div id="faq" class="text-center mx-auto hidden col-12">
+                                     <div class="accordion" id="accordionExample">
+                                         <div class="card">
+                                             <div class="card-header" id="headingOne">
+                                                 <h5 class="mb-0">
+                                                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                         <strong>Arepas de Yuca y Tofu</strong>
+                                                     </button>
+                                                 </h5>
+                                             </div>
+                                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                                 <div class="card-body">
+                                                     <img src="img/arepa.jpeg" alt="arepas">
+                                                     <br>
+                                                     <br>
+                                                     <p>Para esta receta necesitas 500gr de yuca (mandioca), 250gr de tofu (queso vegano), un tomate,
+                                                         sal y pimienta.
+                     
+                                                         Pela la yuca y pon a hervir en agua con una pizca de sal, hasta que se
+                                                         ablande. Una vez blanda, retira del fuego y deja enfriar. Tritura la yuca y luego procede
+                                                         a realizar arepitas. Las puedes comer así o puedes sellarlas en un sartén u horno. Ponle
+                                                         una rebanada de tofu encima con una rodaja de tomate, sal y pimienta al gusto.</p>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                         <div class="card">
+                                             <div class="card-header" id="headingTwo">
+                                                 <h5 class="mb-0">
+                                                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                                         aria-controls="collapseTwo">
+                                                         <strong>Crema de garbanzos</strong>
+                                                     </button>
+                                                 </h5>
+                                             </div>
+                                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                                 <div class="card-body">
+                                                     <img src="img/garbanzo.jpeg" alt="crema de garbanzos">
+                                                     <br>
+                                                     <br>
+                                                     <p>Primero que nada necesitamos 500gr de garbanzos limpios y pelados, ajo, perejil, aceite de
+                                                         oliva, cilantro, crema de leche de coco, pimienta negra y sal. Pon los garbanzos en remojo
+                                                         de un día para otro, asegurando que se ablanden. Pon a hervirlos en 1000ml de agua y
+                                                         sal. Corta en trozos pequeños todos los ingredientes restantes y agrégalos a la mezcla
+                                                         tan pronto estén blandos los garbanzos. Deja un poco de cilantro para el final. Una vez
+                                                         los garbanzos listos, agrega una pizca de pimienta y licúa con la crema de leche de coco.
+                                                         Agrégale una pizca de cilantro finamente picado, y listo, ya tienes una de las tantas
+                                                         recetas veganas sabrosas y fáciles de preparar en casa.</p>
+                                                 </div>
+                                             </div>
+                                             <div class="card">
+                                                 <div class="card-header" id="headingThree">
+                                                     <h5 class="mb-0">
+                                                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                                             aria-controls="collapseThree">
+                                                             <strong>Pesto de palta</strong>
+                                                         </button>
+                                                     </h5>
+                                                 </div>
+                                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                                     <div class="card-body">
+                                                         <img src="img/pesto-palta.jpeg" alt="pesto">
+                                                         <br>
+                                                         <br>
+                                                         <p><b>Estos son los ingredientes:</b>
+                                                             <br>
+                                                             <br>
+                                                                 Una palta Un puñado de albahaca
+                                                                 Dos dientes de ajo 
+                                                                 1 cucharadita de jugo de limón Sal y pimienta al gusto 
+                                                                 Opcional: 1/8 taza de algún fruto seco:nueces, pecanas, piñones o cashews (anacardos) 
+                                                                 <br>
+                                                                 <br>
+                                                             Simplemente, debemos licuar o procesar todos los ingredientes. Te debe salir una crema espesa; si la deseas un poco más
+                                                             ligera, puedes agregarle algo de agua. Puedes servirla con pasta o usarla como aliño
+                                                             para los sandwiches o ensaladas. En la foto, está servida con pasta y un acompañamiento
+                                                             de champiñones y tomates salteados.
+                     
+                                                         </p>
+                                                     </div>
+                     
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <br>
+                                 <br>
+                                 <br>
+                                 <br>
+                                 <br>
+                                 <br>
+                             </center>
+ 
+         </div>
+       </div>
+     </div>
+ 
+ 
+    <div id="recipeVgetarian">
+      <div class="container-fluid hide">
+        <div class="row">
+ 
+           <section>
+             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+               <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                 <a class="navbar-brand" href="#">VegAll</a>
+                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+ 
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav mr-auto">
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                   </li>
+                   <li class="nav-item active">
+                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                   </li>
+                 </ul>
+               </div>
+ 
+             </nav><br>
+           </section>
+ 
+ 
+ 
+           <!--  insertar codigo aquí-->
+ 
+ 
+        </div>
+       </div>
      </div>
    </div>
- </div>
-
- <!-- A estas tres vistas hay que darles las caracteristicas del style2.css-->
- <div id="recipe">
-   <div class="container-fluid hide">
-     <div class="row">
-        XXXXXXXXXXXXXXXXXXXXXXXX
-     </div>
-    </div>
-  </div>
-
-
- <div id="recipeVegan">
-   <div class="container-fluid hide">
-     <div class="row">
-    <div class="row separacion">
-    </div>
-    <section>
-        <div class="row fondoverde">
-            <div class="col-1 style pull-right">
-            </div>
-        </div>
-        <header>
-            <div class="row">
-                <div class="col-12 header">
-                    <center>
-                        <h1><strong>Recetas Veganas</strong></h1>
-                    </center>
-                </div>
-            </div>
-            <div id="faq" class="text-center mx-auto hidden col-12">
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <strong>Arepas de Yuca y Tofu</strong>
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <img src="imagen/arepa.jpg" alt="arepas">
-                                <br>
-                                <br>
-                                <p>Para esta receta necesitas 500gr de yuca (mandioca), 250gr de tofu (queso vegano), un tomate,
-                                    sal y pimienta.
-
-                                    Pela la yuca y pon a hervir en agua con una pizca de sal, hasta que se
-                                    ablande. Una vez blanda, retira del fuego y deja enfriar. Tritura la yuca y luego procede
-                                    a realizar arepitas. Las puedes comer así o puedes sellarlas en un sartén u horno. Ponle
-                                    una rebanada de tofu encima con una rodaja de tomate, sal y pimienta al gusto.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    <strong>Crema de garbanzos</strong>
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <img src="imagen/garbanzo.jpg" alt="crema de garbanzos">
-                                <br>
-                                <br>
-                                <p>Primero que nada necesitamos 500gr de garbanzos limpios y pelados, ajo, perejil, aceite de
-                                    oliva, cilantro, crema de leche de coco, pimienta negra y sal. Pon los garbanzos en remojo
-                                    de un día para otro, asegurando que se ablanden. Pon a hervirlos en 1000ml de agua y
-                                    sal. Corta en trozos pequeños todos los ingredientes restantes y agrégalos a la mezcla
-                                    tan pronto estén blandos los garbanzos. Deja un poco de cilantro para el final. Una vez
-                                    los garbanzos listos, agrega una pizca de pimienta y licúa con la crema de leche de coco.
-                                    Agrégale una pizca de cilantro finamente picado, y listo, ya tienes una de las tantas
-                                    recetas veganas sabrosas y fáciles de preparar en casa.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">
-                                        <strong>Pesto de palta</strong>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <img src="imagen/pesto-palta.jpg" alt="pesto">
-                                    <br>
-                                    <br>
-                                    <p><b>Estos son los ingredientes:</b>
-                                        <br>
-                                        <br>
-                                            Una palta Un puñado de albahaca
-                                            Dos dientes de ajo 
-                                            1 cucharadita de jugo de limón Sal y pimienta al gusto 
-                                            Opcional: 1/8 taza de algún fruto seco:nueces, pecanas, piñones o cashews (anacardos) 
-                                            <br>
-                                            <br>
-                                        Simplemente, debemos licuar o procesar todos los ingredientes. Te debe salir una crema espesa; si la deseas un poco más
-                                        ligera, puedes agregarle algo de agua. Puedes servirla con pasta o usarla como aliño
-                                        para los sandwiches o ensaladas. En la foto, está servida con pasta y un acompañamiento
-                                        de champiñones y tomates salteados.
-
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="row separacion">
-                    <div class="col-12  footer">
-                        <p>...</p>
-                    </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="recipeVgetarian">
-    <section>
-      <div class="row">
-          <div class="col-12 datosUsuario"></div>
-      </div>
-  </section>
-  <div class="row separacion">
-  </div>
-  <section>
-      <div class="row fondoverde">
-          <div class="col-1 style pull-right">
-          </div>
-      </div>
-      <header>
-          <div class="row">
-              <div class="col-12 header">
-                  <center>
-                      <h1><strong>Recetas Vegetarianas</strong></h1>
-                  </center>
-              </div>
-          </div>
-          <div id="faq" class="text-center mx-auto hidden col-12">
-              <div class="accordion" id="accordionExample">
-                  <div class="card">
-                      <div class="card-header" id="headingOne">
-                          <h5 class="mb-0">
-                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  <strong>Patatas asadas con pesto</strong>
-                              </button>
-                          </h5>
-                      </div>
-                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                          <div class="card-body">
-                              <img src="imagen/patatas.jpg" alt="arepas">
-                              <br>
-                              <br>
-                              <p><strong>INGREDIENTES</strong>
-  
-                                1 kilo de patatas pequeñas
-                                Aceite de oliva virgen extra, sal y pimienta negra al gusto
-                                PARA EL PESTO:
-                                1/4 taza de nueces (30 g)
-                                1 taza de espinacas (30 g)
-                                1 diente de ajo
-                                2 cucharadas de levadura nutricional o levadura de cerveza
-                                4 cucharadas de aceite de oliva virgen extra
-                                1/4 cucharadita de sal marina
-                                Pimienta negra al gusto
-                                <br>
-                                <br>
-                                INSTRUCCIONES
-                                Pela las patatas y cuécelas durante unos 10 minutos.
-                                Precalienta el horno a 200ºC ó 390ºF.
-                                Coloca las patatas en una bandeja para horno, echa un chorrito de aceite y sal y pimienta negra al gusto. Hornea durante unos 20 ó 30 minutos o hasta que estén doradas (el tiempo de cocción puede variar en función del horno y del tamaño de las patatas). Cuando hayan pasado los primeros 10 ó 15 minutos dales la vuelta para que se doren por ambos lados.
-                                Para hacer el pesto echa todos los ingredientes en el procesador de alimentos y bate hasta obtener la textura deseada. Si usas una batidora ten cuidado de no batirlo demasiado.
-                                Saca las patatas del horno, echa el pesto, remueve y sirve.</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="card">
-                      <div class="card-header" id="headingTwo">
-                          <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                  aria-controls="collapseTwo">
-                                  <strong>Cuscús de quinoa</strong>
-                              </button>
-                          </h5>
-                      </div>
-                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                          <div class="card-body">
-                              <img src="imagen/cuscus_quinoa.jpg" alt="crema de garbanzos">
-                              <br>
-                              <br>
-                              <p>INGREDIENTES
-                                ♥ 1/2 taza de quinoa
-                                ♥ 1/2 pastilla de caldo de verduras o 1/4 de cucharadita de sal
-                                ♥ 3 cucharadas de aceite de oliva
-                                ♥ 1/4 de calabacín mediano
-                                ♥ 1/4 de cebolla morada
-                                ♥ 1 zanahoria grande
-                                ♥ 1/2 pimiento amarillo mediano
-                                ♥ 1/2 pimiento italiano rojo
-                                ♥ 1/4 de puerro mediano
-                                ♥ 1/4 de cucharadita de sal
-                                ♥ 1 cucharadita de perejil picado
-                                ♥ 1/2 cucharadita de ajo en polvo
-                                ♥ 1/4 de cucharadita de comino en polvo (opcional)
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                
-                                Pon la quinoa en un colador y lávala con agua fría. Escúrrela muy bien para que se seque lo máximo posible.
-                                Calienta en una cacerola mediana 1 cucharada de aceite de oliva a fuego medio y tuesta ligeramente la quinoa, removiendo constantemente, durante 2-3 minutos. Si ves que se pega, baja un poco el fuego. Pon el caldo de verduras o la sal y 1 taza y 1/2 de agua caliente, sube el fuego y cuando empiece a hervir déjalo cocer a fuego medio-bajo, removiendo de vez en cuando, durante 12-14 minutos o hasta que se haya absorbido casi todo el agua. Apaga el fuego y déjalo reposar medio tapado 5 minutos.
-                                
-                                Mientras se hace la quinoa lava las verduras y pícalas en trocitos pequeños. Pon 2 cucharadas de aceite en una sartén mediana antiadherente a fuego medio-alto y agrega las verduras, la sal y las especias. Saltéalo y remuévelo para que se haga uniformemente. Sólo necesita 4 minutos, lo justo para que empiecen a dorarse y la cebolla esté tierna. Sácalo y ponlo en boles o platos para servir.
-                                
-                                Destapa la quinoa después del tiempo de reposo y espónjala con un tenedor, como si fuese cuscús, para que no se apegotone y quede esponjosa y tierna. Repártela en los boles o platos y mézclala con las verduras. Sírvelo caliente o templado.
-                                
-                                No os había subido recetas con quinoa, aunque en muchas sí os he comentado que se podían sustituir ciertos ingredientes por quinoa, sobre todo en platos de cereales y semillas pequeños.
-                                La verdad es que no uso mucho la quinoa, la compro muy poco, principalmente por el precio (en torno a los 12€/kg de media), pero la uso igual que muchos otros cereales y legumbres. La quinoa sola está bien, tiene más sabor que el cuscús (que es pasta) y que el mijo (por poner un ejemplo), recuerda más al trigo sarraceno y al bulgur, con algún aroma almendrado y de otros frutos secos. Por eso os he puesto que le pongáis al agua de cocer o caldo de verduras (para más sabor) o sólo sal (para disfrutar de su sabor tal cual). Al cocerla la quinoa queda suelta y esponjosa. Si está apegotonada y parece puré, es que se ha pasado. Aún así es comestible y conserva una textura agradable. Para tomarla en ensalada, en cuscús, en paella… vamos, para todo lo que sea que quede sueltecita, prefiero tostarla un poco antes. No sólo desarrolla más sabores y más intensos, sino que además acorta unos minutos el tiempo de cocción y favorece que quede más suelta. Cuando quiero usarla como aglutinante, dejo que se haga un poco más, así es más fácil mezclarla con el resto de ingredientes y que haga de “cemento” por ejemplo en hamburguesas, albóndigas, etc., y que se deshaga mucho mejor en cosas al horno como quiches y tartas saladas, muffins y panes. Piensa en la quinoa como en un cruce de legumbre y cereal: podemos cocer las legumbres, freírlas, aplastarlas y hacer puré, utilizarlas como aglomerante en albóndigas y hamburguesas, como crema en tartas, como paté… y como cereal se puede hasta hacer porridge para desayunar. Es cuestión de examinar la quinoa cocida y hacer todo lo que se nos pase por la cabeza con ella. ¿Se puede batir y queda cremosa? Pues bechamel, relleno de croquetas, de quiches y tartas, de tortillas, para mezclar con harina y hacer muffins o panecillos, para hacer paté… vamos, que por versatilidad que no quede. Y además no contiene gluten.
-                                Eso sí, antes de usar la quinoa siempre tenéis que lavarla porque la superficie está recubierta de saponina, que genera la propia planta como protección, pero que tiene un sabor muy amargo y en grandes cantidades es tóxica (ojo, en grandes cantidades, no por 2 o 3 tazas, y no tóxica como para morirse, irrita el sistema gastrointestinal). Si no lavas la quinoa después sabe amarga, así que es mejor hacerlo.</p>
-                          </div>
-                      </div>
-                      <div class="card">
-                          <div class="card-header" id="headingThree">
-                              <h5 class="mb-0">
-                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
-                                      aria-controls="collapseThree">
-                                      <strong>Sopa fría de sandía y tomate</strong>
-                                  </button>
-                              </h5>
-                          </div>
-                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                              <div class="card-body">
-                                  <img src="imagen/sopa-sandia-tomate.jpg" alt="pesto">
-                                  <br>
-                                  <br>
-                                  <p><b>INGREDIENTES
-                                    1 kg. de sandía cortada y sin pepitas
-                                    4 tomates maduros (700 gr. aprox.)
-                                    El jugo de un limón.
-                                    Una rodaja de jengibre fresco
-                                    Dos ramitas de menta
-                                    Una pizca de sal</b>
-                                      <br>
-                                        <br>
-                                          <br>
-                                          PREPARACIÓN
-                                          Cortamos los tomates en taquitos y los ponemos a hervir con un poco de agua (la mitad del volumen aproximadamente). Cuando estén bien cocidos los pasaremos, junto con el jugo de la cocción, por el pasapuré o por un colador bien fino para desechar la piel y la fibra indeseada.
-                                          Rallamos la rodaja de jengibre, picamos las hojas de menta y lo introducimos junto con el resto de los ingredientes en el vaso de la batidora (si no disponéis de batidora de vaso siempre podéis usar la batidora de pie).
-                                          Trituraremos hasta que todos los ingredientes estén bien integrados y obtengamos una textura uniforme. Si lo deseamos, podemos pasar la sopa por el pasapurés o por un colador fino para obtener una textura más fina.
-                                          NOTAS
-                                          Antes de servir la sopa, debería haber pasado unas cuantas horas en la nevera, para que esté bien fresquita y porqué así se acentúan los aromas de la menta y el jengibre. ¡A disfrutar!
-  
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <div class="row separacion">
-                  <div class="col-12  footer">
-                      <p>...</p>
-                  </div> 
-
-  <h1 id="holi">"holi"</h1>
-
-<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-<script>
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyCTisCFz23k7yBARrZy6dbF7MvpGK0eALY",
-  authDomain: "vegall-42fcd.firebaseapp.com",
-  databaseURL: "https://vegall-42fcd.firebaseio.com",
-  projectId: "vegall-42fcd",
-  storageBucket: "vegall-42fcd.appspot.com",
-  messagingSenderId: "877652690632"
-};
-firebase.initializeApp(config);
-  let holi = document.getElementById("holi");
-  let dbref = firebase.database().ref().child("text");
-  dbref.on("value", sanp => holi.innerText = snap.val());
-</script>
-   <script src="https://use.fontawesome.com/7873633050.js"></script>
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-   <script src="app.js"></script>
- </body>
-
- </html>
+ 
+   <h1 id="holi">"holi"</h1>
+ 
+ <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+ <script>
+ // Initialize Firebase
+ var config = {
+   apiKey: "AIzaSyCTisCFz23k7yBARrZy6dbF7MvpGK0eALY",
+   authDomain: "vegall-42fcd.firebaseapp.com",
+   databaseURL: "https://vegall-42fcd.firebaseio.com",
+   projectId: "vegall-42fcd",
+   storageBucket: "vegall-42fcd.appspot.com",
+   messagingSenderId: "877652690632"
+ };
+ firebase.initializeApp(config);
+   let holi = document.getElementById("holi");
+   let dbref = firebase.database().ref().child("text");
+   dbref.on("value", sanp => holi.innerText = snap.val());
+ </script>
+    <script src="https://use.fontawesome.com/7873633050.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+  </body>
+ 
+  </html>
