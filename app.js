@@ -62,7 +62,7 @@ window.googleLogin = () => {
   let provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithRedirect(provider);
   firebase.auth().getRedirectResult().then((result) => {
-    
+
     if (result.credential) {
       // This gives you a Google Access Token. You can use it to access the Google API.
       let token = result.credential.accessToken;
@@ -84,4 +84,8 @@ window.googleLogin = () => {
 
 const logOut = () => {
   firebase.auth().signOut();
+};
+
+window.profie = () => {
+  let = document.getElementById("")
 };

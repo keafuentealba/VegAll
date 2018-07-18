@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+ <html lang="en">
+ <!DOCTYPE html>
+
 <head>
      <meta charset="UTF-8">
      <title>VegAll</title>
@@ -9,297 +10,271 @@
      <link rel="stylesheet" href="style.css" />
  </head>
 
- <body>
-     <section>
-<!--NavBar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-    <a class="navbar-brand" href="#">VegAll</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                 <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                 <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-    </div>
-</nav><br>
-    </section>
- 
-<!--login-->
-<section>
+<body>
 
-        <div class="container" id="logo-titulo">
-                  <center>
-            <img src="img/comida.jpeg" alt="" style="max-width: 150px;">
-                   <br> <h1><b>VegAll</b></h1>
-                </center>   <br>
-        </div>   
- <div class="container">
-   <div id="login" class="main-div">
-     <div class="container-fluid hide">
-       <div class="row">
-            
-         <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
-         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-         <button class="btnL" onclick="login()">login</button>
-        </div><br>
+  <div class="container-fluid">
+    <div id="login" class="main-div form-login text-center">
+      <img class="mb-4" src="http://via.placeholder.com/200x100" alt="">
+
+        <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+        <button class="btnL" onclick="login()">login</button>
+        <br>
+
         <div class="container">
-        <p>  o conéctate usando  </p>
-        <div>
-         <button class="btnG" onclick="googleLogin()">Google</button>
-         <button class="btnF" onclick="facebookLogin()">Facebook</button>
+         <p>  o conéctate usando  </p>
+
+         <div>
+           <button class="btnG" onclick="googleLogin()">Google</button>
+           <button class="btnF" onclick="facebookLogin()">Facebook</button>
+         </div>
+
+
+
+          <div id="user" class="loggedin-div">
+            <h3 >usuario</h3>
+            <p id="usertext">welcome to firebase login</p>
+            <button class="logOut()" type="button" name="button">logOut</button>
+          </div>
+
         </div>
+      </div>
+
+    <div id="profile">
+      <div class="container-fluid hide">
+        <div class="row">
+
+          <section>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                <a class="navbar-brand" href="#">VegAll</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav><br>
+          </section>
+
         </div>
-       
-     </div>
-   </div>
-
-   <div id="user" class="loggedin-div">
-
-     <h3 >usuario</h3>
-      <p id="usertext">welcome to firebase login</p>
-     <button class="logOut()" type="button" name="button">logOut</button>
-
-   </div>
-
-
-   <div id="loginIn">
-     <div class="container-fluid hide">
-       <div class="row">
-          <!--  insertar codigo aquí-->
-       </div>
-     </div>
-   </div>
-</div>
-</section>
-
-<!--Perfil-->
-   <div id="profile">
-     <div class="container-fluid hide">
-       <div class="row">
-            <section>
-                    <!--NavBar-->
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                            <button type="button" class="btn btn-link"> <i class="fas fa-home"></i></button>
-                        <a class="navbar-brand" href="#">VegAll</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item active">
-                                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item active">
-                                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav><br>
-                        </section>
-         <!--  insertar codigo aquí-->
-       </div>
-     </div>
-   </div>
+      </div>
+    </div>
 
 
     <div id="post">
-      <div =class="container-fluid hide">
+      <div class="container-fluid hide">
         <div class="row">
-                <section>
-                        <!--NavBar-->
-                            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                                <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-                            <a class="navbar-brand" href="#">VegAll</a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item active">
-                                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item active">
-                                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav><br>
-                            </section>
-           <!--  insertar codigo aquí-->
+
+          <section>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                <a class="navbar-brand" href="#">VegAll</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                    </li>                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                    </li>
+                  </ul>
+                </div>
+
+              </nav><br>
+            </section>
+
         </div>
       </div>
     </div>
 
 
-  <div id="placesOfInterest">
-   <div class="container-fluid hide">
-     <div class="row">
+    <div id="placesOfInterest">
+      <div class="container-fluid hide">
+        <div class="row">
 
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-       <div class="container">
-         <a class="navbar-brand" href="#">Start Bootstrap</a>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarResponsive">
-           <ul class="navbar-nav ml-auto">
-             <li class="nav-item active">
-               <a class="nav-link" href="#">Home
-                 <span class="sr-only">(current)</span>
-               </a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">About</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">Services</a>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">Contact</a>
-             </li>
-           </ul>
-         </div>
-       </div>
-     </nav>
+          <section>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                <a class="navbar-brand" href="#">VegAll</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-     <!-- Page Content -->
-     <!-- <div class="container">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+              </div>
 
+            </nav><br>
+          </section>
+
+          <div class="col-lg-9">
+            <div class="card mt-4">
+              <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+              <div class="card-body">
+                <h3 class="card-title">Product Name</h3>
+                <h4>$24.99</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+                4.0 stars
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+   <div id="recipe">
+     <div class="container-fluid hide">
        <div class="row">
 
-         <div class="col-lg-3">
-           <h1 class="my-4">Shop Name</h1>
-           <div class="list-group">
-             <a href="#" class="list-group-item active">Category 1</a>
-             <a href="#" class="list-group-item">Category 2</a>
-             <a href="#" class="list-group-item">Category 3</a>
-           </div>
-         </div> -->
-         <!-- /.col-lg-3 -->
+          <section>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                <a class="navbar-brand" href="#">VegAll</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-         <div class="col-lg-9">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+              </div>
 
-           <div class="card mt-4">
-             <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
-             <div class="card-body">
-               <h3 class="card-title">Product Name</h3>
-               <h4>$24.99</h4>
-               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-               <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9733; &#9734;</span>
-               4.0 stars
-             </div>
-           </div>
-           <!-- /.card -->
+            </nav><br>
+          </section>
 
-           <!-- <div class="card card-outline-secondary my-4">
-             <div class="card-header">
-               Product Reviews
-             </div>
-             <div class="card-body">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-               <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-               <hr>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-               <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-               <hr>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-               <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-               <hr>
-               <a href="#" class="btn btn-success">Leave a Review</a>
-             </div>
-           </div> -->
-           <!-- /.card -->
-
-         </div>
-         <!-- /.col-lg-9 -->
-
-       </div>
-
-     </div>
-       <!--  insertar codigo aquí-->
-     </div>
-   </div>
- </div>
-
-
- <div id="recipe">
-   <div class="container-fluid hide">
-     <div class="row">
-            <section>
-                    <!--NavBar-->
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                            <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-                        <a class="navbar-brand" href="#">VegAll</a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item active">
-                                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item active">
-                                     <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav><br>
-                        </section>
-        <!--  insertar codigo aquí-->
-     </div>
-    </div>
-  </div>
-
-
- <div id="recipeVegan">
-   <div class="container-fluid hide">
-     <div class="row">
-        <!--  insertar codigo aquí-->
+        </div>
       </div>
     </div>
-  </div>
 
 
- <div id="recipeVgetarian">
-   <div class="container-fluid hide">
-     <div class="row">
-        <!--  insertar codigo aquí-->
-     </div>
+   <div id="recipeVegan">
+     <div class="container-fluid hide">
+       <div class="row">
+
+          <section>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                <a class="navbar-brand" href="#">VegAll</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav><br>
+          </section>
+
+
+        </div>
+      </div>
+    </div>
+
+
+   <div id="recipeVgetarian">
+     <div class="container-fluid hide">
+       <div class="row">
+
+          <section>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+                <a class="navbar-brand" href="#">VegAll</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                  </li>
+                </ul>
+              </div>
+
+            </nav><br>
+          </section>
+
+
+
+          <!--  insertar codigo aquí-->
+
+
+       </div>
+      </div>
     </div>
   </div>
 
