@@ -86,6 +86,38 @@ const logOut = () => {
   firebase.auth().signOut();
 };
 
-window.profie = () => {
-  let = document.getElementById("")
+
+window.login = () => {
+  let login = document.getElementById("login");
+  let perfil = document.getElementById("profile");
+
+  login.classList.add("hide");
+  profile.classList.remove("hide");
 };
+
+window.profie = () => {
+  let perfil = document.getElementById("profile");
+  let post = document.getElementById("post");
+
+  profile.classList.add("hide");
+  post.classList.remove("hide");
+
+};
+
+window.post = () => {
+  let post = document.getElementById("post");
+  let placesOfInterest = document.getElementById("placesOfInterest");
+
+  post.classList.add("hide");
+  placesOfInterest.classList.add("hide");
+
+};
+
+ window.placesOfInterest = () => {
+   let placesOfInterest = document.getElementById("placesOfInterest");
+   let recipe = document.getElementById("recipe");
+
+   placesOfInterest.classList.add("hide");
+   recipe.classList.add("hide");
+
+ };
