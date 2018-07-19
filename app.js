@@ -180,11 +180,3 @@ window.post = () => {
 
 };
 
- window.placesOfInterest = () => {
-   let placesOfInterest = document.getElementById("placesOfInterest");
-   let recipe = document.getElementById("recipe");
-
-   placesOfInterest.classList.add("hide");
-   recipe.classList.add("hide");
-
- };
