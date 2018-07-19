@@ -77,8 +77,8 @@
      </div>
  
  
-     <div id="post">
-       <div class="container-fluid hide">
+     <div id="post" class="hide">
+       <div class="container-fluid ">
          <div class="row">
  
            <section>
@@ -106,7 +106,18 @@
  
                </nav><br>
              </section>
- 
+             <!--codigo de muro-->
+             <section class="center">
+              <div class="container">
+                  <textarea class="txt" id="name" placeholder="Ingresa tu nombre..."></textarea>
+                  <textarea class="txt" id="comment" placeholder="Añade un comentario..."></textarea>
+                  <button type="submit" onclick="saveComment()" id="btn" i class="fa fa-plus" aria-hidden="true"></i> Agregar</button>
+                  
+                  <!-- contenedor comentarios -->
+                  <div id="cont">
+                      
+                  </div>
+                  </section>
          </div>
        </div>
      </div>
@@ -409,6 +420,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+  <!-- Script alertify -->
+  <link href="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/css/alertify.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
   </body>
- 
   </html>
