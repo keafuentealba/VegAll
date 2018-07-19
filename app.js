@@ -156,16 +156,16 @@ window.drawPlaces = () => {
 		.bindPopup('<b>Govindas Restaurant Vegetariano</b><br>Restaurant de comida vegetariana');
 
   L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
-    .bindPopup('<b>Emporio vegetal</b><br>Restaurant de comida vegetariana');
+    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
 
   L.marker({lat: -33.4274609,lng: -70.6334404}, {icon: greenIcon}).addTo(map)
-		.bindPopup('<b>La Bodeguita Verde</b><br>Restaurant de comida vegetariana');
+		.bindPopup('<b>La Bodeguita Verde</b><br>Tienda de alimentos naturales');
 
   L.marker({lat: -33.4322166, lng: -70.6552301}, {icon: greenIcon}).addTo(map)
     .bindPopup('<b>Restaurant Soju Vegano Vegetariano</b><br>Restaurant de comida vegetariana');
 
   L.marker({lat: -33.4233575, lng: -70.6109175}, {icon: greenIcon}).addTo(map)
-    .bindPopup('<b>Adhana</b><br>Restaurant de comida vegetariana');
+    .bindPopup('<b>DellNatura</b><br>Tieneda de articulos naturales Av. Nueva Providencia 2155, Providencia, Región Metropolitana');
 
 
 
@@ -179,4 +179,3 @@ window.post = () => {
   placesOfInterest.classList.add("hide");
 
 };
-

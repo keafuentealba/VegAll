@@ -13,129 +13,90 @@
      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
    crossorigin=""/>
- </head>
-
-<body>
 
  </head>
 
- <body>
-     <section>
-<!--NavBar
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-    <a class="navbar-brand" href="#">VegAll</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                 <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                 <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
-    </div>
-</nav><br> -->
-    </section>
- 
-<!--login-->
-<section>
+  <body>
 
-        <div class="container" id="logo-titulo">
-                  <center>
-            <img src="img/comida.jpeg" alt="" style="max-width: 150px;">
-                   <br> <h1><b>VegAll</b></h1>
-                </center>   <br>
-        </div>   
- <div class="container">
-   <div id="login" class="main-div">
-     <div class="container-fluid hide">
-       <div class="row">
-            
-         <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
-         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-         <button class="btnL" onclick="login()">login</button>
-         
-        </div><br>
-        <div>
-        <a href="loginIn">Usuario nuevo</a>
-    </div><br>
-        <div class="container">
-        <p>  o conéctate usando  </p>
-        <div>
-         <button class="btnG" onclick="googleLogin()">Google</button>
-         <button class="btnF" onclick="facebookLogin()">Facebook</button>
+    <section>
+      <div class="container" id="logo-titulo">
+        <center>
+          <img src="img/comida.jpeg" alt="" style="max-width: 150px;">
+            <br> <h1><b>VegAll</b></h1>
+        </center>   <br>
+      </div>
+      <div class="container">
+        <div id="login" class="main-div">
+          <div class="container-fluid hide">
+            <div class="row">
+              <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
+              <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+              <button class="btnL" onclick="login()">login</button>
+            </div><br>
+          <div>
+            <a href="loginIn">Usuario nuevo</a>
+          </div><br>
+          <div class="container">
+            <p>  o conéctate usando  </p>
+            <div>
+              <button class="btnG" onclick="googleLogin()">Google</button>
+              <button class="btnF" onclick="facebookLogin()">Facebook</button>
+            </div>
+          </div>
+          </div>
         </div>
-        </div>
-       
-     </div>
-   </div>
 
-   <div id="user" class="loggedin-div">
-
-     <h3 >usuario</h3>
-      <p id="usertext">welcome to firebase login</p>
-     <button class="logOut()" type="button" name="button">logOut</button>
-
-   </div>
+      <div id="user" class="loggedin-div">
+        <h3 >usuario</h3>
+        <p id="usertext">welcome to firebase login</p>
+        <button class="logOut()" type="button" name="button">logOut</button>
+      </div>
 
 <!--Forma para inscripcion-->
 
-   <div id="loginIn">
-     <div class="container-fluid hide">
-       <div class="row">
-           
+      <div id="loginIn">
+        <div class="container-fluid hide">
+          <div class="row">
             <form id="signupform" class="form-horizontal" role="form">
-                    <div id="signupalert" style="display:none" class="alert alert-danger">
-                        <p>Error:</p>
-                        <span></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="col-md-3 control-label">Correo electrónico</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" name="email" placeholder="Correo electrónico">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="firstname" class="col-md-3 control-label">Nombre</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" name="firstname" placeholder="Nombre">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastname" class="col-md-3 control-label">Apellido</label>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control" name="lastname" placeholder="Apellido">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="col-md-3 control-label">Password</label>
-                        <div class="col-md-9">
-                            <input type="password" class="form-control" name="passwd" placeholder="Password">
-                        </div>
-                    </div>        
-                    <div class="form-group">
-                        <!-- Button -->                                        
-                        <div class="col-md-offset-3 col-md-9">
-                            <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-                        </div>
-                    </div>                                               
-                </form>
-          <!--  insertar codigo aquí-->
-       </div>
-     </div>
-   </div>
-</div>
+              <div id="signupalert" style="display:none" class="alert alert-danger">
+                <p>Error:</p>
+                <span></span>
+              </div>
+          <div class="form-group">
+            <label for="email" class="col-md-3 control-label">Correo electrónico</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="email" placeholder="Correo electrónico">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="firstname" class="col-md-3 control-label">Nombre</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="firstname" placeholder="Nombre">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastname" class="col-md-3 control-label">Apellido</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" name="lastname" placeholder="Apellido">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-md-3 control-label">Password</label>
+            <div class="col-md-9">
+              <input type="password" class="form-control" name="passwd" placeholder="Password">
+            </div>
+          </div>
+          <div class="form-group">
+
+            <div class="col-md-offset-3 col-md-9">
+              <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 
@@ -143,7 +104,7 @@
   <div id="profile" class="hide">
       <div class="container-fluid">
         <div class="row">
-            
+
             <section>
                 <!--foto perfil+boton+espacio para postear-->
                 <section>
@@ -154,7 +115,7 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            
+
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item active">
@@ -174,7 +135,7 @@
                         </nav>
                             <br>
                 </section>
-                
+
                 <div class="container">
                     <div class="card">
                         <div class="card-body">
@@ -219,7 +180,7 @@
                                                         <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
                                                         <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
                                                         <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
-                                   </div>    
+                                   </div>
                                     </div>
                                 </div>
                             </div>
@@ -290,14 +251,14 @@
                                                     <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
                                                     <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
                                                     <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>   
+                                                    <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
                                                </div>
                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-            
+
          <!--  insertar codigo aquí-->
        </div>
      </div>
@@ -311,7 +272,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
@@ -367,7 +328,7 @@
     <div id="post">
       <div =class="container-fluid hide">
         <div class="row">
-                
+
            <!--  insertar codigo aquí-->
         </div>
         <h1>Posts</h1>
@@ -377,7 +338,7 @@
 </section>
 <section>
 
-  
+
 <section>
 
 
@@ -393,7 +354,7 @@
 
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
 
@@ -429,7 +390,7 @@
   <div id="placesOfInterest">
    <div class="container-fluid hide">
      <div class="row">
-            
+
         <!--  insertar codigo aquí-->
      </div>
    </div>
@@ -465,8 +426,11 @@
 
             </nav>
           </section>
-
-        </div>
+          <div class="container" id="botonreceta">
+            <center><button class="button" id="botonVega" type="submit" onclick="verRecetas()"><strong> Recetas Veganas</strong></button></center>
+            <br>
+            <center><button class="button" id="botonVege" type="submit" onclick="verRecetas()"><strong> Recetas Vegetarianas</strong></button></center>
+          </div>
         <h1>Recipes</h1>
       </div>
     </div>
@@ -484,7 +448,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -503,48 +467,44 @@
             </div>
         </nav><br>
             </section>
- <div id="recipeVegan"><center>
-   <div class="container-fluid hide">
-     <div class="row">
-            <section>
-                    <div class="row">
-                        <div class="col-12 datosUsuario"></div>
-                    </div>
-                </section>
-                <div class="row separacion">
-                </div>
-                <section>
-                    <div class="row fondoverde">
-                        <div class="col-1 style pull-right">
-                        </div>
-                    </div>
-    
-                        <div class="row">
-                                <div id="faq" class="text-center mx-auto hidden col-12">
-                                        <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne">
+            <!-- bloque de recertas-->
+      <section>
+        <div class="row">
+          <div class="col-12 datosUsuario"></div>
+        </div>
+      </section>
+        <div class="row separacion">
+        </div>
+      <section>
+        <div class="row fondoverde">
+          <div class="col-1 style pull-right">
+          </div>
+        </div>
+        <div class="row">
+          <div id="faq" class="text-center mx-auto hidden col-12">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-header" id="headingOne">
                 <h5 class="mb-0">
                   <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Arepas de Yuca y Tofu
                   </button>
                 </h5>
-              </div>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <img src="img/arepa.jpeg" alt="arepas"><br><br>
 
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-
-                  <img src="img/arepa.jpeg" alt="arepas">
-                  <br>
-                  <br>
                   <p>Para esta receta necesitas 500gr de yuca (mandioca), 250gr de tofu (queso vegano), un tomate, sal y pimienta.
                     Pela la yuca y pon a hervir en agua con una pizca de sal, hasta que se ablande. Una vez blanda, retira
                     del fuego y deja enfriar. Tritura la yuca y luego procede a realizar arepitas. Las puedes comer así o
                     puedes sellarlas en un sartén u horno. Ponle una rebanada de tofu encima con una rodaja de tomate, sal
                     y pimienta al gusto.</p>
+
+                  </div>
                 </div>
               </div>
-            </div>
+
             <div class="card">
               <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">
@@ -554,11 +514,11 @@
                   </button>
                 </h5>
               </div>
+
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                  <img src="img/garbanzo.jpeg" alt="crema de garbanzos">
-                  <br>
-                  <br>
+                  <img src="img/garbanzo.jpeg" alt="crema de garbanzos"><br><br>
+
                   <p>Primero que nada necesitamos 500gr de garbanzos limpios y pelados, ajo, perejil, aceite de oliva, cilantro,
                     crema de leche de coco, pimienta negra y sal. Pon los garbanzos en remojo de un día para otro, asegurando
                     que se ablanden. Pon a hervirlos en 1000ml de agua y sal. Corta en trozos pequeños todos los ingredientes
@@ -579,9 +539,8 @@
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                   <div class="card-body">
-                    <img src="img/pesto-palta.jpeg" alt="pesto">
-                    <br>
-                    <br>
+                    <img src="img/pesto-palta.jpeg" alt="pesto">  <br><br>
+
                     <p>
                       <b>Estos son los ingredientes:</b>
                       <br>
@@ -595,14 +554,11 @@
 
                     </p>
                   </div>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-
         <h1>Vegan Recipes</h1>
 
       </div>
@@ -676,4 +632,3 @@ firebase.initializeApp(config);
  </body>
 
  </html>
-
