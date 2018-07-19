@@ -1,280 +1,557 @@
- <html lang="en">
- <!DOCTYPE html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-     <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>VegAll</title>
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" media="(max-width: 800px)" href="style.css" />
+
  </head>
 
-<body>
+ <body>
+     <section>
+<!--NavBar
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+    <a class="navbar-brand" href="#">VegAll</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                 <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                 <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav><br> -->
+    </section>
+ 
+<!--login-->
+<section>
 
-  <div class="container-fluid">
-    <div id="login" class="main-div form-login text-center">
-      <img class="mb-4" src="http://via.placeholder.com/200x100" alt="">
-
-        <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-        <button class="btnL" onclick="login()">login</button>
-        <br>
-
+        <div class="container" id="logo-titulo">
+                  <center>
+            <img src="img/comida.jpeg" alt="" style="max-width: 150px;">
+                   <br> <h1><b>VegAll</b></h1>
+                </center>   <br>
+        </div>   
+ <div class="container">
+   <div id="login" class="main-div">
+     <div class="container-fluid hide">
+       <div class="row">
+            
+         <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
+         <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+         <button class="btnL" onclick="login()">login</button>
+         
+        </div><br>
+        <div>
+        <a href="loginIn">Usuario nuevo</a>
+    </div><br>
         <div class="container">
-         <p>  o conéctate usando  </p>
-
-         <div>
-           <button class="btnG" onclick="googleLogin()">Google</button>
-           <button class="btnF" onclick="facebookLogin()">Facebook</button>
-         </div>
-
-
-
-          <div id="user" class="loggedin-div">
-            <h3 >usuario</h3>
-            <p id="usertext">welcome to firebase login</p>
-            <button class="logOut()" type="button" name="button">logOut</button>
-          </div>
-
+        <p>  o conéctate usando  </p>
+        <div>
+         <button class="btnG" onclick="googleLogin()">Google</button>
+         <button class="btnF" onclick="facebookLogin()">Facebook</button>
         </div>
-      </div>
-
-    <div id="profile">
-      <div class="container-fluid hide">
-        <div class="row">
-
-          <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                  </li>
-                </ul>
-              </div>
-
-            </nav><br>
-          </section>
-
         </div>
-      </div>
-    </div>
+       
+     </div>
+   </div>
 
+   <div id="user" class="loggedin-div">
 
-    <div id="post">
-      <div class="container-fluid hide">
-        <div class="row">
+     <h3 >usuario</h3>
+      <p id="usertext">welcome to firebase login</p>
+     <button class="logOut()" type="button" name="button">logOut</button>
 
-          <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                    </li>                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                    </li>
-                  </ul>
+   </div>
+
+<!--Forma para inscripcion-->
+
+   <div id="loginIn">
+     <div class="container-fluid hide">
+       <div class="row">
+           
+            <form id="signupform" class="form-horizontal" role="form">
+                    <div id="signupalert" style="display:none" class="alert alert-danger">
+                        <p>Error:</p>
+                        <span></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-md-3 control-label">Correo electrónico</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="email" placeholder="Correo electrónico">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname" class="col-md-3 control-label">Nombre</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="firstname" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname" class="col-md-3 control-label">Apellido</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" name="lastname" placeholder="Apellido">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="col-md-3 control-label">Password</label>
+                        <div class="col-md-9">
+                            <input type="password" class="form-control" name="passwd" placeholder="Password">
+                        </div>
+                    </div>        
+                    <div class="form-group">
+                        <!-- Button -->                                        
+                        <div class="col-md-offset-3 col-md-9">
+                            <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
+                        </div>
+                    </div>                                               
+                </form>
+          <!--  insertar codigo aquí-->
+
+       </div>
+     </div>
+   </div>
+</div>
+</section>
+
+<!--Perfil-->
+   <div id="profile">
+     <div class="container-fluid hide">
+       <div class="row">
+            
+            <section>
+                <!--foto perfil+boton+espacio para postear-->
+                <section>
+                        <!--NavBar-->
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                                <button type="button" class="btn btn-link"> <i class="fas fa-home"></i></button>
+                            <a class="navbar-brand" href="#">VegAll</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item active">
+                                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                            <br>
+                </section>
+                
+                <div class="container">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                        <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                                    <p class="text-secondary text-center">15 Minutes Ago</p>
+                                </div>
+                                <div class="col-md-10">
+                                    <p>
+                                        <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                                   </p>
+                                   <div class="clearfix"></div>
+                                    <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                                    <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                                                    <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                                                    <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                                                    <button type="button" class="btn btn-secondary"id="newPost"> <i class="far fa-file"></i> </button>
+                                 </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div><div id="posts"><h4><strong><center>Posts</center></strong></h4></div>
                 </div>
-
-              </nav><br>
+                <!--post anteriores-->
+                <div class="container">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                                        <p class="text-secondary text-center">15 Minutes Ago</p>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <p>
+                                            <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                                       </p>
+                                       <div class="clearfix"></div>
+                                        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                                        <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                                                        <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                                                        <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                                   </div>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="container">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                                <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                                            <p class="text-secondary text-center">15 Minutes Ago</p>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <p>
+                                                <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                                           </p>
+                                           <div class="clearfix"></div>
+                                            <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                                            <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                                                            <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                                                            <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                                                            <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="container">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                    <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                                                <p class="text-secondary text-center">15 Minutes Ago</p>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <p>
+                                                    <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                                               </p>
+                                               <div class="clearfix"></div>
+                                                <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                                                <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                                                                <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                                                                <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                                                                <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                                           </div>
+                                           </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                        <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                                                    <p class="text-secondary text-center">15 Minutes Ago</p>
+                                                </div>
+                                                <div class="col-md-10">
+                                                    <p>
+                                                        <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                                                   </p>
+                                                   <div class="clearfix"></div>
+                                                    <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                                    <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                                                    <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                                                    <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>   
+                                               </div>
+                                               </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+         <!--  insertar codigo aquí-->
+       </div>
+     </div>
+   </div>
+<!--Post-->==============================================================================================
+<section>
+        <!--NavBar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+            <a class="navbar-brand" href="#">VegAll</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav><br>
             </section>
-
+    <div id="post">
+      <div =class="container-fluid hide">
+        <div class="row">
+                
+           <!--  insertar codigo aquí-->
         </div>
       </div>
     </div>
-
-
-    <div id="placesOfInterest">
-      <div class="container-fluid hide">
-        <div class="row">
-
-          <section>
+</section>
+<section>
+<!--places of interest-->========================================================================================
+<section>
+        <!--NavBar-->
             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+            <a class="navbar-brand" href="#">VegAll</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                  </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                    </li>
                 </ul>
+            </div>
+        </nav><br>
+            </section>
+  <div id="placesOfInterest">
+   <div class="container-fluid hide">
+     <div class="row">
+            
+        <!--  insertar codigo aquí-->
+     </div>
+   </div>
+ </div>
+</section>
+
+<section>
+<!--Recipes-->=========================================================================================================
+<section>
+        <!--NavBar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+            <a class="navbar-brand" href="#">VegAll</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav><br>
+            </section>
+ <div id="recipe">
+   <div class="container-fluid hide">
+     <div class="row">
+            
+        <div class="container" id="botonreceta"> 
+                        <center><button class="button" id="botonVega" type="submit" onclick="verRecetas()"><strong> Recetas Veganas</strong></button></center>
+                        <br>
+                        <center><button class="button" id="botonVege" type="submit" onclick="verRecetas()"><strong> Recetas Vegetarianas</strong></button></center> 
+        </div> 
+        <!--  insertar codigo aquí-->
+     </div>
+    </div>
+  </div>
+<!--recetas veganas-->===================================================================================================
+<section>
+        <!--NavBar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+            <a class="navbar-brand" href="#">VegAll</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav><br>
+            </section>
+ <div id="recipeVegan"><center>
+   <div class="container-fluid hide">
+     <div class="row">
+            <section>
+                    <div class="row">
+                        <div class="col-12 datosUsuario"></div>
+                    </div>
+                </section>
+                <div class="row separacion">
+                </div>
+                <section>
+                    <div class="row fondoverde">
+                        <div class="col-1 style pull-right">
+                        </div>
+                    </div>
+    
+                        <div class="row">
+                                <div id="faq" class="text-center mx-auto hidden col-12">
+                                        <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Arepas de Yuca y Tofu
+                  </button>
+                </h5>
               </div>
 
-            </nav><br>
-          </section>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
 
-          <div class="col-lg-9">
-            <div class="card mt-4">
-              <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
-              <div class="card-body">
-                <h3 class="card-title">Product Name</h3>
-                <h4>$24.99</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                4.0 stars
+                  <img src="img/arepa.jpeg" alt="arepas">
+                  <br>
+                  <br>
+                  <p>Para esta receta necesitas 500gr de yuca (mandioca), 250gr de tofu (queso vegano), un tomate, sal y pimienta.
+                    Pela la yuca y pon a hervir en agua con una pizca de sal, hasta que se ablande. Una vez blanda, retira
+                    del fuego y deja enfriar. Tritura la yuca y luego procede a realizar arepitas. Las puedes comer así o
+                    puedes sellarlas en un sartén u horno. Ponle una rebanada de tofu encima con una rodaja de tomate, sal
+                    y pimienta al gusto.</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    <strong>Crema de garbanzos</strong>
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <img src="img/garbanzo.jpeg" alt="crema de garbanzos">
+                  <br>
+                  <br>
+                  <p>Primero que nada necesitamos 500gr de garbanzos limpios y pelados, ajo, perejil, aceite de oliva, cilantro,
+                    crema de leche de coco, pimienta negra y sal. Pon los garbanzos en remojo de un día para otro, asegurando
+                    que se ablanden. Pon a hervirlos en 1000ml de agua y sal. Corta en trozos pequeños todos los ingredientes
+                    restantes y agrégalos a la mezcla tan pronto estén blandos los garbanzos. Deja un poco de cilantro para
+                    el final. Una vez los garbanzos listos, agrega una pizca de pimienta y licúa con la crema de leche de
+                    coco. Agrégale una pizca de cilantro finamente picado, y listo, ya tienes una de las tantas recetas veganas
+                    sabrosas y fáciles de preparar en casa.</p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                      aria-controls="collapseThree">
+                      <strong>Pesto de palta</strong>
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <img src="img/pesto-palta.jpeg" alt="pesto">
+                    <br>
+                    <br>
+                    <p>
+                      <b>Estos son los ingredientes:</b>
+                      <br>
+                      <br> Una palta Un puñado de albahaca Dos dientes de ajo 1 cucharadita de jugo de limón Sal y pimienta al
+                      gusto Opcional: 1/8 taza de algún fruto seco:nueces, pecanas, piñones o cashews (anacardos)
+                      <br>
+                      <br> Simplemente, debemos licuar o procesar todos los ingredientes. Te debe salir una crema espesa; si
+                      la deseas un poco más ligera, puedes agregarle algo de agua. Puedes servirla con pasta o usarla como
+                      aliño para los sandwiches o ensaladas. En la foto, está servida con pasta y un acompañamiento de champiñones
+                      y tomates salteados.
+
+                    </p>
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-   </div>
 
-
-   <div id="recipe">
-     <div class="container-fluid hide">
-       <div class="row">
-
-          <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                  </li>
-                </ul>
-              </div>
-
-            </nav><br>
-          </section>
-
-        </div>
+                    
+        <!--  insertar codigo aquí-->
       </div>
     </div>
+  </div>
 
-
-   <div id="recipeVegan">
-     <div class="container-fluid hide">
-       <div class="row">
-
-          <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                  </li>
-                </ul>
-              </div>
-
-            </nav><br>
-          </section>
-
-
-        </div>
-      </div>
-    </div>
-
-
-   <div id="recipeVgetarian">
-     <div class="container-fluid hide">
-       <div class="row">
-
-          <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                  </li>
-                </ul>
-              </div>
-
-            </nav><br>
-          </section>
-
-
-
-          <!--  insertar codigo aquí-->
-
-
-       </div>
-      </div>
+<!--recetas vegetarianas-->==================================================================================================
+ <div id="recipeVgetarian">
+   <div class="container-fluid hide">
+     <div class="row">
+        <!--  insertar codigo aquí-->
+     </div>
     </div>
   </div>
 
@@ -282,7 +559,7 @@
 
 
 
-  <h1 id="holi">"holi"</h1>
+
 
 
 <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
@@ -297,9 +574,6 @@ var config = {
   messagingSenderId: "877652690632"
 };
 firebase.initializeApp(config);
-  let holi = document.getElementById("holi");
-  let dbref = firebase.database().ref().child("text");
-  dbref.on("value", sanp => holi.innerText = snap.val());
 </script>
    <script src="https://use.fontawesome.com/7873633050.js"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
