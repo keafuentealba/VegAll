@@ -8,6 +8,9 @@
      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
      <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
  </head>
 
 <body>
@@ -40,8 +43,8 @@
         </div>
       </div>
 
-    <div id="profile">
-      <div class="container-fluid hide">
+    <div id="profile" class="hide">
+      <div class="container-fluid">
         <div class="row">
 
           <section>
@@ -55,35 +58,33 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="changePage('profile', 'post')">Posts <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="changePage('profile', 'placesOfInterest')">Lugares de Interés <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="changePage('profile', 'recipe')">Recetas <span class="sr-only">(current)</span></a>
                   </li>
                 </ul>
               </div>
 
-            </nav><br>
+            </nav>
           </section>
 
         </div>
+        <h1>Profiles</h1>
       </div>
     </div>
 
 
-    <div id="post">
-      <div class="container-fluid hide">
+    <div id="post" class="hide">
+      <div class="container-fluid">
         <div class="row">
 
           <section>
             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+              <button type="button" class="btn btn-link"> <i class="far fa-user" onclick="changePage('post', 'profile')"></i></button>
                 <a class="navbar-brand" href="#">VegAll</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -94,12 +95,9 @@
                       <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="#" onclick="changePage('post', 'placesOfInterest')">Lugares de Interés <span class="sr-only">(current)</span></a>
                     </li>                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="#" onclick="changePage('post', 'recipe')">Recetas <span class="sr-only">(current)</span></a>
                     </li>
                   </ul>
                 </div>
@@ -108,17 +106,18 @@
             </section>
 
         </div>
+        <h1>Posts</h1>
       </div>
     </div>
 
 
-    <div id="placesOfInterest">
-      <div class="container-fluid hide">
+    <div id="placesOfInterest" class="hide">
+      <div class="container-fluid">
         <div class="row">
 
           <section>
             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+              <button type="button" class="btn btn-link" onclick="changePage('placesOfInterest', 'profile')"> <i class="far fa-user"></i></button>
                 <a class="navbar-brand" href="#">VegAll</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -127,33 +126,30 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="changePage('placesOfInterest', 'post')">Posts <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
                     <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="changePage('placesOfInterest', 'recipe')">Recetas <span class="sr-only">(current)</span></a>
                   </li>
                 </ul>
               </div>
 
             </nav><br>
           </section>
+        </div>
 
-          <div class="col-lg-9">
-            <div class="card mt-4">
-              <img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
-              <div class="card-body">
-                <h3 class="card-title">Product Name</h3>
-                <h4>$24.99</h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-                4.0 stars
-              </div>
+        <div class="col-lg-9">
+          <div class="card mt-4">
+            <div id='map' style='width: 900; height: 400;'></div>
+            <div class="card-body">
+              <h3 class="card-title">Product Name</h3>
+              <h4>$24.99</h4>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+              4.0 stars
             </div>
           </div>
         </div>
@@ -161,13 +157,13 @@
    </div>
 
 
-   <div id="recipe">
-     <div class="container-fluid hide">
+   <div id="recipe" class="hide">
+     <div class="container-fluid">
        <div class="row">
 
           <section>
             <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+              <button type="button" class="btn btn-link"  onclick="changePage('recipe', 'profile')"> <i class="far fa-user"></i></button>
                 <a class="navbar-brand" href="#">VegAll</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -176,30 +172,28 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="changePage('recipe', 'post')">Posts <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="changePage('recipe', 'placesOfInterest')">Lugares de Interés <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item active">
                     <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
                   </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                  </li>
                 </ul>
               </div>
 
-            </nav><br>
+            </nav>
           </section>
 
         </div>
+        <h1>Recipes</h1>
       </div>
     </div>
 
 
-   <div id="recipeVegan">
-     <div class="container-fluid hide">
+   <div id="recipeVegan" class="hide">
+     <div class="container-fluid">
        <div class="row">
 
           <section>
@@ -232,12 +226,13 @@
 
 
         </div>
+        <h1>Vegan Recipes</h1>
       </div>
     </div>
 
 
-   <div id="recipeVgetarian">
-     <div class="container-fluid hide">
+   <div id="recipeVgetarian" class="hide">
+     <div class="container-fluid">
        <div class="row">
 
           <section>
@@ -268,12 +263,8 @@
             </nav><br>
           </section>
 
-
-
-          <!--  insertar codigo aquí-->
-
-
-       </div>
+        </div>
+        <h1>Vegetarian Recipes</h1>
       </div>
     </div>
   </div>
@@ -294,12 +285,13 @@ var config = {
 firebase.initializeApp(config);
   let holi = document.getElementById("holi");
   let dbref = firebase.database().ref().child("text");
-  dbref.on("value", sanp => holi.innerText = snap.val());
+  //dbref.on("value", sanp => holi.innerText = snap.val());
 
 </script>
    <script src="https://use.fontawesome.com/7873633050.js"></script>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
    <script src="app.js"></script>
  </body>
 
