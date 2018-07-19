@@ -86,6 +86,7 @@ const logOut = () => {
   firebase.auth().signOut();
 };
 
+
  window.changePage = (actual, next) => {
    actual = document.getElementById(actual);
    next = document.getElementById(next);
@@ -167,4 +168,23 @@ window.drawPlaces = () => {
     .bindPopup('<b>Adhana</b><br>Restaurant de comida vegetariana');
 
 
+
 };
+
+window.post = () => {
+  let post = document.getElementById("post");
+  let placesOfInterest = document.getElementById("placesOfInterest");
+
+  post.classList.add("hide");
+  placesOfInterest.classList.add("hide");
+
+};
+
+ window.placesOfInterest = () => {
+   let placesOfInterest = document.getElementById("placesOfInterest");
+   let recipe = document.getElementById("recipe");
+
+   placesOfInterest.classList.add("hide");
+   recipe.classList.add("hide");
+
+ };
