@@ -113,9 +113,7 @@
   img {
     width: 100%;
   }
-  #faq{
-    padding-left: 130px;
-  }
+  
   #botonVega{
     background-color: #777;
     color:white;
@@ -128,7 +126,5 @@
     width: 200px;
     height: 100px;
   }
-  .accordionVege{
-    padding: 130px;
-  }
+  
 }
