@@ -1,436 +1,303 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>VegAll</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-     <link rel="stylesheet" href="style.css" />
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-   crossorigin=""/>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VegAll</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
 
- </head>
+  </head>
 
   <body>
-
-    <section>
+    <div id="login" class="main-div">
       <div class="container" id="logo-titulo">
         <center>
           <img src="img/comida.jpeg" alt="" style="max-width: 150px;">
             <br> <h1><b>VegAll</b></h1>
         </center>   <br>
       </div>
-      <div class="container">
-        <div id="login" class="main-div">
-          <div class="container-fluid hide">
-            <div class="row">
-              <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
-              <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-              <button class="btnL" onclick="login()">login</button>
-            </div><br>
-          <div>
-            <a href="loginIn">Usuario nuevo</a>
-          </div><br>
-          <div class="container">
-            <p>  o conéctate usando  </p>
-            <div>
-              <button class="btnG" onclick="googleLogin()">Google</button>
-              <button class="btnF" onclick="facebookLogin()">Facebook</button>
-            </div>
-          </div>
-          </div>
+      <div class="container-fluid">
+        <div class="row">
+          <input type="email" class="form-control" id="staticEmail" placeholder="email@example.com">
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+          <button class="btnL" onclick="login()">login</button>
         </div>
-
-      <div id="user" class="loggedin-div">
-        <h3 >usuario</h3>
-        <p id="usertext">welcome to firebase login</p>
-        <button class="logOut()" type="button" name="button">logOut</button>
-      </div>
-
-<!--Forma para inscripcion-->
-
-      <div id="loginIn">
-        <div class="container-fluid hide">
-          <div class="row">
-            <form id="signupform" class="form-horizontal" role="form">
-              <div id="signupalert" style="display:none" class="alert alert-danger">
-                <p>Error:</p>
-                <span></span>
-              </div>
-          <div class="form-group">
-            <label for="email" class="col-md-3 control-label">Correo electrónico</label>
-            <div class="col-md-9">
-              <input type="text" class="form-control" name="email" placeholder="Correo electrónico">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="firstname" class="col-md-3 control-label">Nombre</label>
-            <div class="col-md-9">
-              <input type="text" class="form-control" name="firstname" placeholder="Nombre">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="lastname" class="col-md-3 control-label">Apellido</label>
-            <div class="col-md-9">
-              <input type="text" class="form-control" name="lastname" placeholder="Apellido">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="password" class="col-md-3 control-label">Password</label>
-            <div class="col-md-9">
-              <input type="password" class="form-control" name="passwd" placeholder="Password">
-            </div>
-          </div>
-          <div class="form-group">
-
-            <div class="col-md-offset-3 col-md-9">
-              <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> &nbsp Sign Up</button>
-            </div>
-          </div>
-          </form>
+        <p>  o conéctate usando  </p>
+        <div>
+          <button class="btnG" onclick="googleLogin()">Google</button>
+          <button class="btnF" onclick="facebookLogin()">Facebook</button>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-
-<!--Perfil-->
-  <div id="profile" class="hide">
+    <!--Perfil-->
+    <div id="profile" class="hide">
       <div class="container-fluid">
         <div class="row">
-
-            <section>
-                <!--foto perfil+boton+espacio para postear-->
-                <section>
-                        <!--NavBar-->
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                                <button type="button" class="btn btn-link"> <i class="fas fa-home"></i></button>
-                            <a class="navbar-brand" href="#">VegAll</a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item active">
-                                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item active">
-                                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                            <br>
-                </section>
-
-                <div class="container">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-2">
-                                        <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
-                                    <p class="text-secondary text-center">15 Minutes Ago</p>
-                                </div>
-                                <div class="col-md-10">
-                                    <p>
-                                        <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
-                                   </p>
-                                   <div class="clearfix"></div>
-                                    <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                                    <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
-                                                    <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
-                                                    <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
-                                                    <button type="button" class="btn btn-secondary"id="newPost"> <i class="far fa-file"></i> </button>
-                                 </div>
-                              </div>
-                            </div>
-                        </div>
-                    </div><div id="posts"><h4><strong><center>Posts</center></strong></h4></div>
-                </div>
-                <!--post anteriores-->
-                <div class="container">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
-                                        <p class="text-secondary text-center">15 Minutes Ago</p>
-                                    </div>
-                                    <div class="col-md-10">
-                                        <p>
-                                            <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
-                                       </p>
-                                       <div class="clearfix"></div>
-                                        <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                                        <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
-                                                        <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
-                                                        <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
-                                                        <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
-                                   </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <div class="container">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                                <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
-                                            <p class="text-secondary text-center">15 Minutes Ago</p>
-                                        </div>
-                                        <div class="col-md-10">
-                                            <p>
-                                                <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
-                                           </p>
-                                           <div class="clearfix"></div>
-                                            <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                                            <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
-                                                            <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
-                                                            <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
-                                                            <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
-                                        </div>
-                                       </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <div class="container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <div class="col-md-2">
-                                                    <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
-                                                <p class="text-secondary text-center">15 Minutes Ago</p>
-                                            </div>
-                                            <div class="col-md-10">
-                                                <p>
-                                                    <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
-                                               </p>
-                                               <div class="clearfix"></div>
-                                                <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                                                <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
-                                                                <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
-                                                                <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
-                                           </div>
-                                           </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <div class="container">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                        <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
-                                                    <p class="text-secondary text-center">15 Minutes Ago</p>
-                                                </div>
-                                                <div class="col-md-10">
-                                                    <p>
-                                                        <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
-                                                   </p>
-                                                   <div class="clearfix"></div>
-                                                    <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                                    <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
-                                                    <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
-                                                    <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
-                                               </div>
-                                               </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-         <!--  insertar codigo aquí-->
-       </div>
-     </div>
-   </div>
-<!--Post-->
-<section>
-        <!--NavBar-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
+          <!--NavBar-->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <button type="button" class="btn btn-link"> <i class="fas fa-home"></i></button>
             <a class="navbar-brand" href="#">VegAll</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="changePage('profile', 'post')">Posts <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="changePage('profile', 'placesOfInterest')">Lugares de Interés <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="changePage('profile', 'recipe')">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                </ul>
-              </div>
-
-            </nav>
-          </section>
-
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="changePage('profile', 'post')">Posts</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="changePage('profile', 'placesOfInterest')">Lugares de Interés</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="changePage('profile', 'recipe')">Recetas</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="logOut()">LogOut</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
         <h1>Profiles</h1>
       </div>
     </div>
 
+<!--Post-->
 
     <div id="post" class="hide">
       <div class="container-fluid">
         <div class="row">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <button type="button" class="btn btn-link" onclick="changePage('post', 'profile')"> <i class="fas fa-home"></i></button>
+            <a class="navbar-brand" href="#">VegAll</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"> <i class="far fa-user" onclick="changePage('post', 'profile')"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#" onclick="changePage('post', 'placesOfInterest')">Lugares de Interés <span class="sr-only">(current)</span></a>
-                    </li>                    <li class="nav-item active">
-                      <a class="nav-link" href="#" onclick="changePage('post', 'recipe')">Recetas <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Posts</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="changePage('post', 'placesOfInterest')">Lugares de Interés</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="changePage('post', 'recipe')">Recetas</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="logOut()">LogOut</a>
+                </li>
+              </ul>
             </div>
-        </nav><br>
-            </section>
-    <div id="post">
-      <div =class="container-fluid hide">
-        <div class="row">
-
-           <!--  insertar codigo aquí-->
+          </nav>
         </div>
         <h1>Posts</h1>
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                  <p class="text-secondary text-center">15 Minutes Ago</p>
+                </div>
+                <div class="col-md-10">
+                  <p>
+                  <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                  </p>
+                  <div class="clearfix"></div>
+                  <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                  <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                  <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                  <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                  <button type="button" class="btn btn-secondary"id="newPost"> <i class="far fa-file"></i> </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--post anteriores-->
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                  <p class="text-secondary text-center">15 Minutes Ago</p>
+                </div>
+                <div class="col-md-10">
+                  <p>
+                    <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                  </p>
+                  <div class="clearfix"></div>
+                  <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                  <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                  <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                  <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                  <p class="text-secondary text-center">15 Minutes Ago</p>
+                </div>
+                <div class="col-md-10">
+                  <p>
+                    <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                  </p>
+                  <div class="clearfix"></div>
+                  <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                  <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                  <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                  <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                  <p class="text-secondary text-center">15 Minutes Ago</p>
+                </div>
+                <div class="col-md-10">
+                  <p>
+                    <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                  </p>
+                  <div class="clearfix"></div>
+                  <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                  <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                  <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                  <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                  <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-2">
+                  <center><img src="img/comida.jpeg" max-width="150px" class="img img-rounded img-fluid"/></center>
+                  <p class="text-secondary text-center">15 Minutes Ago</p>
+                </div>
+                <div class="col-md-10">
+                <p>
+                  <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Titulo Post</strong></a>
+                </p>
+                <div class="clearfix"></div>
+                <p>Lorem Ipsum is simply dummy text of the pr make  but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <button type="button" class="btn btn-secondary"id="mapa"> <i class="fas fa-map-marker-alt"></i></button>
+                <button type="button" class="btn btn-secondary"id="heart"> <i class="fa fa-heart"></i></button>
+                <button type="button" class="btn btn-secondary"id="edit"> <i class="far fa-edit"></i></button>
+                <button type="button" class="btn btn-secondary"id="trash"> <i class="far fa-trash-alt"></i> </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-</section>
-<section>
-
-
-<section>
-
 
     <div id="placesOfInterest" class="hide">
       <div class="container-fluid">
         <div class="row">
 
-          <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link" onclick="changePage('placesOfInterest', 'profile')"> <i class="far fa-user"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-                <span class="navbar-toggler-icon"></span>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <button type="button" class="btn btn-link" onclick="changePage('placesOfInterest', 'profile')"> <i class="fas fa-home"></i></button>
+            <a class="navbar-brand" href="#">VegAll</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="changePage('placesOfInterest', 'post')">Posts <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="changePage('placesOfInterest', 'recipe')">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                </ul>
-              </div>
-
-            </nav><br>
-          </section>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="changePage('placesOfInterest', 'post')">Posts</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Lugares de Interés</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="changePage('placesOfInterest', 'recipe')">Recetas</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="logOut()">LogOut</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
 
         <div class="col-lg-9">
-          <div class="card mt-4">
-            <div id='map' style='width: 900; height: 400;'></div>
-            <div class="card-body">
-              <h3 class="card-title">Product Name</h3>
-              <h4>$24.99</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-              <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
-              4.0 stars
 
-            </div>
-        </nav><br>
-            </section>
-  <div id="placesOfInterest">
-   <div class="container-fluid hide">
-     <div class="row">
+          <div id='map' style='width: 950px; height: 400px;'></div>
 
-        <!--  insertar codigo aquí-->
-     </div>
-   </div>
- </div>
-</section>
+        </div>
+      </div>
+    </div>
 
 
    <div id="recipe" class="hide">
      <div class="container-fluid">
-       <div class="row">
+        <div class="row">
 
-          <section>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-              <button type="button" class="btn btn-link"  onclick="changePage('recipe', 'profile')"> <i class="far fa-user"></i></button>
-                <a class="navbar-brand" href="#">VegAll</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+           <button type="button" class="btn btn-link" onclick="changePage('recipe', 'profile')"> <i class="fas fa-home"></i></button>
+           <a class="navbar-brand" href="#">VegAll</a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
 
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="changePage('recipe', 'post')">Posts <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#" onclick="changePage('recipe', 'placesOfInterest')">Lugares de Interés <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                  </li>
-                </ul>
-              </div>
-
-            </nav>
-          </section>
-          <div class="container" id="botonreceta">
-            <center><button class="button" id="botonVega" type="submit" onclick="verRecetas()"><strong> Recetas Veganas</strong></button></center>
-            <br>
-            <center><button class="button" id="botonVege" type="submit" onclick="verRecetas()"><strong> Recetas Vegetarianas</strong></button></center>
-          </div>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav mr-auto">
+               <li class="nav-item active">
+                 <a class="nav-link" href="#" onclick="changePage('recipe', 'post')">Posts</a>
+               </li>
+               <li class="nav-item active">
+                 <a class="nav-link" href="#" onclick="changePage('recipe', 'placesOfInterest')">Lugares de Interés</a>
+               </li>
+               <li class="nav-item active">
+                 <a class="nav-link" href="#">Recetas</a>
+               </li>
+               <li class="nav-item active">
+                 <a class="nav-link" href="#" onclick="logOut()">LogOut</a>
+               </li>
+             </ul>
+           </div>
+         </nav>
+        </div>
+        <div class="container" id="botonreceta">
+          <center><button class="button" id="botonVega" type="submit" onclick="verRecetas()"><strong> Recetas Veganas</strong></button></center>
+          <br>
+          <center><button class="button" id="botonVege" type="submit" onclick="verRecetas()"><strong> Recetas Vegetarianas</strong></button></center>
+        </div>
         <h1>Recipes</h1>
       </div>
     </div>
@@ -440,34 +307,6 @@
      <div class="container-fluid">
        <div class="row">
 
-          <section>
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                <button type="button" class="btn btn-link"> <i class="far fa-user"></i></button>
-            <a class="navbar-brand" href="#">VegAll</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                         <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                         <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav><br>
-            </section>
-            <!-- bloque de recertas-->
       <section>
         <div class="row">
           <div class="col-12 datosUsuario"></div>
@@ -561,6 +400,7 @@
         </div>
         <h1>Vegan Recipes</h1>
 
+        </div>
       </div>
     </div>
   </div>
@@ -580,16 +420,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Posts <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Posts</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Lugares de Interés <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Lugares de Interés</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Recetas <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Recetas</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="#">Ayuda <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#" onclick="logOut()">LogOut</a>
                   </li>
                 </ul>
               </div>
@@ -601,7 +441,6 @@
         <h1>Vegetarian Recipes</h1>
       </div>
     </div>
-  </div>
 
 
 
@@ -618,7 +457,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-  let holi = document.getElementById("holi");
   let dbref = firebase.database().ref().child("text");
   //dbref.on("value", sanp => holi.innerText = snap.val());
 
