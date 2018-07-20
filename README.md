@@ -60,7 +60,7 @@ El sketch anterior se pasó a un prototipo de alta fidelidad para definir el est
 #### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
 
-![sketch final Red-Social](ingrese link aca)
+![sketch final Red-Social](https://marvelapp.com/4dgb17g/screen/45597551)
 
 ### Funcionalidad y prioridades de producto.
 
