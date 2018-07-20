@@ -157,18 +157,6 @@ window.drawPlaces = () => {
   L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
     .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
 
-  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
-    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
-
-  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
-    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
-
-  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
-    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
-
-  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
-    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
-
 };
 
 window.changePage = (actual, next) => {
