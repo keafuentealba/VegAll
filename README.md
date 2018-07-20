@@ -57,10 +57,10 @@ En primer lugar, cada integrante del equipo trabajó individualmente y planteó 
 
 El sketch anterior se pasó a un prototipo de alta fidelidad para definir el estilo completo antes de empezar a trabajar directamente con el html y css del proyecto.
 
-#### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
+#### Diseño de la Interfaz de Usuario (prototipo de alta fidelidad).
 
 
-![sketch final Red-Social](ingrese link aca)
+[sketch final Red-Social](https://marvelapp.com/4dgb17g/screen/45597551)
 
 ### Funcionalidad y prioridades de producto.
 
