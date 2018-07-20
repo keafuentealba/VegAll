@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged((user) => {
 
     if(user != null){
       let idEmail = user.email;
-      document.getElementById("usertext").innerHTML = "welcome user : " + idEmail;
+      document.getElementById("usertext").innerHTML = "Bienvenid@ : " + idEmail;
     }
 
   } else {
@@ -86,22 +86,6 @@ const logOut = () => {
   firebase.auth().signOut();
 };
 
-
- window.changePage = (actual, next) => {
-   actual = document.getElementById(actual);
-   next = document.getElementById(next);
-
-   actual.classList.add("hide");
-   next.classList.remove("hide");
-
-   if(next.id === 'placesOfInterest'){
-     map.invalidateSize();
-     map.locate({'setView': true});
-     drawPlaces();
-   }
-
- };
-
 var map = L.map('map').fitWorld();
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -116,12 +100,12 @@ function onLocationFound(e) {
 	var radius = e.accuracy / 2;
 
 	L.marker(e.latlng).addTo(map)
-
 }
 
 function onLocationError(e) {
 	alert(e.message);
 }
+
 map.on('locationfound', onLocationFound);
 map.on('locationerror', onLocationError);
 
@@ -144,7 +128,7 @@ window.drawPlaces = () => {
 		.bindPopup('<b>El Huerto</b><br>Restaurant de comida vegetariana');
 
   L.marker({lat: -33.4293881, lng: -70.5876901}, {icon: greenIcon}).addTo(map)
-		.bindPopup('<b>Aldea Nativa</b><br>Restaurant de comida vegetariana');
+		.bindPopup('<b>Aldea Nativa</b><br>Restaurant organico');
 
   L.marker({lat: -33.4376327, lng: -70.648433}, {icon: greenIcon}).addTo(map)
 		.bindPopup('<b>Granero del Goloso</b><br>Restaurant de comida vegetariana');
@@ -165,17 +149,39 @@ window.drawPlaces = () => {
     .bindPopup('<b>Restaurant Soju Vegano Vegetariano</b><br>Restaurant de comida vegetariana');
 
   L.marker({lat: -33.4233575, lng: -70.6109175}, {icon: greenIcon}).addTo(map)
-    .bindPopup('<b>DellNatura</b><br>Tieneda de articulos naturales Av. Nueva Providencia 2155, Providencia, Región Metropolitana');
+    .bindPopup('<b>DellNatura</b><br>Tieneda de articulos naturales');
 
+  L.marker({lat: -33430416, lng: -70630575}, {icon: greenIcon}).addTo(map)
+    .bindPopup('<b>Gopal</b><br>Platos vegetarianos');
 
+  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
+    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
+
+  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
+    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
+
+  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
+    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
+
+  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
+    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
+
+  L.marker({lat: -33.4428964, lng: -70.6682877}, {icon: greenIcon}).addTo(map)
+    .bindPopup('<b>Emporio vegetal</b><br>Tienda naturista');
 
 };
 
-window.post = () => {
-  let post = document.getElementById("post");
-  let placesOfInterest = document.getElementById("placesOfInterest");
+window.changePage = (actual, next) => {
+ actual = document.getElementById(actual);
+ next = document.getElementById(next);
 
-  post.classList.add("hide");
-  placesOfInterest.classList.add("hide");
+ actual.classList.add("hide");
+ next.classList.remove("hide");
+
+ if(next.id === 'placesOfInterest'){
+   map.invalidateSize();
+   map.locate({'setView': true});
+   drawPlaces();
+ }
 
 };
